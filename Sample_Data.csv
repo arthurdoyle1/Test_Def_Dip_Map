@@ -1,2 +1,259 @@
-Location_Name,Year,Comments,Source,Address,City,State_province,Zip,Country_ISO3166_alpha2,Latitude,Longitude,Phone,URL,Delivering_country,Diplomacy_category,Accessibility,Receiving_Countries,Public
-Manson Community Library,2023,"Chinese, Vanuatu military doctors complete tumor resection operation on Peace Ark",http://eng.mod.gov.cn/xb/Milit...,,,,,,47.88523,-120.15965,,,China,Military medical diplomacy,,Vanuatu,
+,Year,Diplomacy_category,Delivering_Country,Receiving_Countries,Comments,Source,Latitude,Longitude
+,2023,Arms control,New Zealand,"Fiji, Vanuatu",RNZN ship’s crew to undertake historic survey and bomb disposal in Pacific Islands mission,https://www.nzdf.mil.nz/media-...,-17.8254,177.3296
+,2023,Arms control,Australia,Solomon Islands,About 500 plus UXOs safely remove and ready for destruction in Western Province,https://www.rsipf.gov.sb/?q=no...,-9.2,160.176
+,2023,Arms control,United States of America,"Solomon Islands, Fiji, Papua New Guinea",Addressing war legacies through unexploded ordnance (UXO) assistance,https://www.whitehouse.gov/bri...,-9.21,160.111
+,2023,Arms control,New Zealand,Vanuatu,NZ Navy to dispose 4 World War II bombs submerged in Port Vila Harbour,NZ Navy to dispose 4 World War...,-17.591,168.263
+,2016,Arms control,Russia,Fiji,"In early 2016, Fiji and Russia have made an arms deal worth $8.8M to rearm the Republic of Fiji Military Forces.",https://www.rnz.co.nz/internat...,-17.721,178.066
+,2023,Cultural Diplomacy (Defence),Australia,Papua New Guinea,Sappers from 3 CER enjoying some downtime with the local children in PNG,https://www.facebook.com/3rdbr...,-5.5664,146.1783
+,2023,Cultural Diplomacy (Defence),Australia,Papua New Guinea,"Official Opening of the Kokoda Gallery & World War II Exhibition, Port Moresby, Papua New Guinea",https://www.minister.defence.g...,-6.1065,145.9589
+,2023,Cultural Diplomacy (Defence),Australia,Papua New Guinea,Walking in the footsteps of history,Walking in the footsteps of hi...,-6.2864,145.3848
+,2023,Cultural Diplomacy (Defence),Australia,Solomon Islands,Repairing erosion firms Pacific bonds,https://www.defence.gov.au/new...,-9.6118,160.073
+,2020,Defence Cooperation,Australia,Fiji,Fiji and Australia to negotiate new military pact,https://www.wsws.org/en/articl...,-17.6198,177.5723
+,2023,Defence Cooperation,China,Fiji,RFMF strengthens ties with PLA,https://www.fbcnews.com.fj/new...,-17.7602,177.1247
+,2023,Defence Cooperation,Australia,Papua New Guinea,PNG and Australia's defence cooperation is a 'jewel' of their relationship,https://www.abc.net.au/news/20...,-6.1843,145.4022
+,2021,Defence Cooperation,Australia,Papua New Guinea,The annual Australia-PNG Defence Cooperation Talks,https://twitter.com/ADFinPNG/s...,-6.0073,146.4154
+,2022,Defence Cooperation,France,Papua New Guinea,PNG and France sign security agreement,https://www.thenational.com.pg...,-5.8532,145.3351
+,2023,Defence Cooperation,United States of America,Papua New Guinea,The US and PNG sign New Defence Cooperation Agreement,https://www.state.gov/the-unit...,-6.0327,146.5507
+,2023,Defence Infrastructure,Australia,Fiji,Fiji receives 14 Bushmasters from Australia to help with its international PKOs,https://www.fbcnews.com.fj/new...,-17.5644,177.309
+,2021,Defence Infrastructure,Australia,Fiji,World-class training facility in Fiji nears completion,https://www.defence.gov.au/new...,-17.8943,177.1581
+,2023,Defence Infrastructure,Australia,Papua New Guinea,Taurama Barracks Accommodation Project,https://twitter.com/CDF_Aust/s...,-6.3675,144.6344
+,2023,Defence Infrastructure,Australia,Papua New Guinea,Building relationships in PNG,https://www.defence.gov.au/new...,-5.4832,145.8891
+,2023,Defence Infrastructure,Australia,Papua New Guinea,Fourth Guardian-class Patrol Boat delivered to Papua New Guinea,https://www.minister.defence.g...,-5.5104,144.5298
+,2023,Defence Infrastructure,Australia,Papua New Guinea,Extending a helping hand,https://www.defence.gov.au/new...,-6.1372,144.9002
+,2023,Defence Infrastructure,Australia,Papua New Guinea,Infrastructure and lifelong friendships built,https://www.defence.gov.au/new...,-6.1739,145.1945
+,2023,Defence Infrastructure,Australia,Papua New Guinea,"The ADF renovates a classroom at Lombrum Naval Base, Manus",https://www.facebook.com/3rdbr...,-5.8087,146.4884
+,2023,Defence Infrastructure,Australia,Papua New Guinea,"Australia, Papua New Guinea Reach New Defence Partnership Milestone",https://www.miragenews.com/aus...,-6.3143,146.1186
+,2021,Defence Infrastructure,Australia,Papua New Guinea,"Opening of new accommodation block at Igam Barracks, Lae",https://twitter.com/ADFinPNG/s...,-6.4511,146.4117
+,2021,Defence Infrastructure,Australia,Papua New Guinea,Delivery of Soldier Combat Ensemble by the ADF to the PNGDF,https://twitter.com/ADFinPNG/s...,-6.1232,146.0927
+,2021,Defence Infrastructure,Australia,Papua New Guinea,Australian defence spending in Papua New Guinea to provide business opportunities,https://www.businessadvantagep...,-5.7511,146.0494
+,2021,Defence Infrastructure,Australia,Papua New Guinea,Building on partnership with PNG,https://www.contactairlandands...,-5.5583,145.5686
+,2023,Defence Infrastructure,United Kingdom,Papua New Guinea,The Bristish Army help renovate a school building in Papua New Guinea,https://www.linkedin.com/posts...,-6.2102,145.5325
+,2021,Defence Infrastructure,United States of America,Papua New Guinea,"PNG, US sign deal for security",https://www.thenational.com.pg...,-6.0096,145.9176
+,2023,Defence Infrastructure,Australia,Solomon Islands,Remote Positioning Vehicle gifted to RSIPF,https://www.rsipf.gov.sb/?q=no...,-9.561,160.097
+,2021,Defence Infrastructure,Australia,Solomon Islands,Austal Australia delivers 10th Guardian Class Patrol Boat,https://www.austal.com/news/au...,-8.1995,157.66
+,2023,Defence Infrastructure,Australia,Tonga,New communications system for HMAF and NEMO,https://matangitonga.to/2023/0...,-21.168,-175.195
+,2023,Defence Infrastructure,Australia,Tonga,HMAF Taliai Camp Mess Hall gets makeover,https://matangitonga.to/2023/0...,-20.789,-175.05
+,2023,Defence Infrastructure,Australia,Tonga,ADF supports HMAF develops telecommunications infrastructure through Project LALI,https://twitter.com/Australian...,-21.068,-175.15
+,2022,Defence Infrastructure,Australia,Tonga,HMAF receives hydrographic equipment through Australian Defence partnership,https://matangitonga.to/2022/1...,-20.846,-175.188
+,2021,Defence Infrastructure,Australia,Tonga,King opens new military camp in 'Eua,https://matangitonga.to/2021/0...,-20.824,-175.259
+,2021,Defence Infrastructure,Australia,Tonga,Australian Government provides navy vessel to Tonga,https://tonga-gov.pt/en/his-ma...,-21.105,-175.229
+,2020,Defence Infrastructure,Australia,Tonga,Australia funds Tonga's Joint Maritime Coordination Centre,https://matangitonga.to/2020/0...,-21.021,-175.025
+,2020,Defence Infrastructure,Australia,Tonga,ADF assists HMAF through Australian Defence Cooperation Program,https://matangitonga.to/2020/0...,-20.95,-175.033
+,2020,Defence Infrastructure,Australia,Tonga,HMAF's new patrol boat and crew quarantine in harbour,https://matangitonga.to/2020/1...,-20.91,-175.018
+,2019,Defence Infrastructure,Australia,Tonga,Tonga's King commissions navy's new headquarters building and patrol boat,https://www.looptonga.com/tong...,-21.195,-175.136
+,2022,Defence Infrastructure,New Zealand,Tonga,NZ constructs multi-million Tonga Pacific Leadership Centre,https://matangitonga.to/2022/0...,-21.139,-175.133
+,2020,Defence Infrastructure,New Zealand,Tonga,NZ delivers PPE and Unimog parts to Tonga,https://www.rnz.co.nz/internat...,-20.879,-175.142
+,2023,Defence Infrastructure,France,Vanuatu,"France navy ship unloads materials to renovate school facilities in Efaté, Vanuatu",https://twitter.com/jeangene_v...,-17.781,168.242
+,2023,Defence Infrastructure,France,Vanuatu,The D’Entrecasteaux Overseas Support and Assistance Building transported equipment to Port Vila,https://twitter.com/EtatMajorF...,-17.86,168.172
+,2023,Defence Infrastructure,New Zealand,Vanuatu,New Zealand to fund Leadership Training Centre,https://www.dailypost.vu/news/...,-17.673,168.142
+,2020,Defence Infrastructure,New Zealand,Vanuatu,New Zealand Defence Force donates rapid response equipment to VMF Engineers,https://www.dailypost.vu/news/...,-17.73,168.195
+,2023,Defence Infrastructure,Australia,Papua New Guinea,PNG-Australia Partnership,https://twitter.com/ADFinPNG/s...,-5.5868,145.317
+,2021,HADR – Disaster Response,Australia,Fiji,ADF and Fiji military strengthens vuvale partnership,https://www.fbcnews.com.fj/new...,-17.8772,177.6162
+,2021,HADR – Disaster Response,Australia,Fiji,ADF helicopters assist in delivering aid during Operation Fiji Assist,https://www.fijitimes.com/adf-...,-17.707,177.4132
+,2021,HADR – Disaster Response,Australia,Fiji,Rebuilding opportunities in Fiji,https://www.defence.gov.au/new...,-17.6231,177.1626
+,2020,HADR – Disaster Response,Australia,Fiji,More than 600 ADF personnel on their way to Fiji,https://www.fijivillage.com/ne...,-17.9632,177.3737
+,2020,HADR – Disaster Response,Australia,Fiji,Australia stands with our Fijian Vuvale following Tropical Cyclone Yasa,https://www.minister.defence.g...,-17.6225,177.2967
+,2023,HADR – Disaster Response,New Zealand,Fiji,NZ Air Force finds Fiji fishing boat missing for 9 days,https://matangitonga.to/2023/1...,-17.9638,177.9757
+,2023,HADR – Disaster Response,United States of America,Fiji,Pacific Partnership 2023 Returns to Fiji,https://www.dvidshub.net/news/...,-17.6489,177.9393
+,2020,HADR – Disaster Response,Australia,Papua New Guinea,COVID-19 Relief Assistance,https://twitter.com/ADFinPNG/s...,-5.4671,146.0996
+,2023,HADR – Disaster Response,France,Papua New Guinea,French navy sails in with relief supplies,https://www.postcourier.com.pg...,-6.1634,144.7724
+,2023,HADR – Disaster Response,New Zealand,Papua New Guinea,NZDF delivers relief supplies to Bougainville,https://twitter.com/ddotaona/s...,-5.5852,145.5195
+,2023,HADR – Disaster Response,New Zealand,Papua New Guinea,New Zealand sends aid to autonomous region of Bougainville after eruption,https://www.nzdf.mil.nz/media-...,-5.8198,145.9805
+,2023,HADR – Disaster Response,United States of America,Papua New Guinea,Pacific Partnership continues humanitarian mission,https://www.looppng.com/png-ne...,-5.7161,146.5868
+,2023,HADR – Disaster Response,United States of America,Papua New Guinea,Pacific Partnership 2023 Concludes Fourth Stop in Papua New Guinea,Pacific Partnership 2023 Concl...,-5.5032,145.2529
+,2023,HADR – Disaster Response,"United States of America, United Kingdom, Australia, New Zealand, Japan",Papua New Guinea,Pacific Partnership in Moem,https://insidepng.com/pacific-...,-5.9481,145.2795
+,2022,HADR – Disaster Response,Australia,Solomon Islands,RAN personnel rescue occupants of distressed SI police boat,https://www.bairdmaritime.com/...,-10.7776,160.791
+,2022,HADR – Disaster Response,Australia,Tonga,ADF assists Tonga during volcanic eruption,https://twitter.com/PeterDutto...,-20.998,-175.009
+,2022,HADR – Disaster Response,Australia,Tonga,ADF's Operation Tonga Assist,https://www.youtube.com/watch?...,-21.003,-175.221
+,2022,HADR – Disaster Response,Australia,Tonga,Tongan homecoming for ADF personnel,https://www.youtube.com/watch?...,-21.153,-175.079
+,2023,HADR – Disaster Response,New Zealand,Tonga,NZ Army helps restore community halls,https://matangitonga.to/2023/0...,-20.862,-175.05
+,2023,HADR – Disaster Response,Australia,Vanuatu,ADF wraps up Operation Vanuatu Assist after cyclones,https://www.defenceconnect.com...,-17.734,168.322
+,2023,HADR – Disaster Response,Australia,Vanuatu,HMAS Canberra arrives in Vanuatu following tropical cyclones Judy and Kevin,https://twitter.com/DefenceAus...,-16.877,168.316
+,2023,HADR – Disaster Response,Australia,Vanuatu,A RAFF C-27 has surveyed the damage from Tropical Cyclone Lola,https://twitter.com/PatConroy1...,-17.721,168.138
+,2023,HADR – Disaster Response,Australia,Vanuatu,An ADF C-130 delivered first loads of TC Lola humanitarian relief stores - essential hygiene and shelter supplies,https://twitter.com/AusHCVanua...,-17.526,168.152
+,2023,HADR – Disaster Response,Australia,Vanuatu,RNZAF aerial surveillance and relief supply flight to assist Vanuatu recover from the impact of TC Lola,https://twitter.com/NanaiaMahu...,-17.62,168.231
+,2023,HADR – Disaster Response,France,Vanuatu,French army conducts reconnaissance flight to assess the impact of cyclone Lola,https://twitter.com/jeangene_v...,-17.926,168.207
+,2023,HADR – Disaster Response,France,Vanuatu,French medical team supports victims of TC Lola,https://twitter.com/jeangene_v...,-17.652,168.122
+,2023,HADR – Disaster Response,New Zealand,Vanuatu,NZ AirForce P-8A Poseidon aircraft assists Vanuatu to assess damage following Tropical Cyclone Lola,https://twitter.com/NZDefenceF...,-17.834,168.265
+,2023,HADR – Disaster Response,"New Zealand, United States of America",Vanuatu,The US Coast Guards and the VMF worked with NZ in providing essential supplies to affected areas in Vanuatu,https://twitter.com/NicciSimmo...,-17.87,168.046
+,2023,HADR – Disaster Response,United States of America,Vanuatu,USCG dispatches assistance to Vanuatu in cyclone’s aftermath,https://www.saipantribune.com/...,-17.96,168.119
+,2023,HADR – Disaster Response,United States of America,Vanuatu,The USCG deployed a C-130 to aid the disaster relief following the Category 5 Tropical Cyclone LOLA,https://twitter.com/USCGHawaii...,-17.634,168.196
+,2023,Maritime Security,China,Fiji,Two Fijian navy shipriders onboard Chinese Naval Training Ship Qi Jiguang,https://twitter.com/ChineseEmb...,-17.7531,177.8261
+,2021,Maritime Security,Australia,Papua New Guinea,Talks to strengthen maritime partnership between PNG and Australia,https://twitter.com/CN_Austral...,-5.8714,145.1808
+,2021,Maritime Security,Australia,Papua New Guinea,Australia delivers maritime defence capability boost for Papua New Guinea,https://www.defence.gov.au/new...,-5.6513,145.3412
+,2023,Maritime Security,United States of America,Papua New Guinea,US and PNG strengthens Maritime Security and Sustainability,https://www.dvidshub.net/news/...,-5.6403,146.3606
+,2023,Maritime Security,United States of America,Papua New Guinea,Papua New Guinea leads joint maritime operations with US Coast Guard,https://www.news.uscg.mil/Pres...,-6.2779,145.1944
+,2023,Maritime Security,United States of America,Papua New Guinea,USCGC Myrtle Hazard crew concludes 46-day patrol in the Pacific,https://www.news.uscg.mil/Pres...,-5.7269,146.0063
+,2023,Maritime Security,United States of America,Papua New Guinea,VP-16 Concludes Operations in Papua New Guinea,https://www.dvidshub.net/news/...,-5.8446,144.7878
+,2023,Maritime Security,Australia,Solomon Islands,RSIPF Guardian Class Patrol Boat will now be armed,https://solomons.gov.sb/rsipf-...,-9.4297,160.399
+,2021,Maritime Security,Australia,Solomon Islands,Support to the Pacific,https://www.defence.gov.au/new...,-9.2688,160.413
+,2023,Maritime Security,Australia,Tonga,Surveillance by Australian Defence Plane,https://matangitonga.to/2023/0...,-21.158,-175.212
+,2023,Maritime Security,Australia,Vanuatu,Defence supports Pacific Partners to combat illegal fishing in the region,https://www.defence.gov.au/new...,-17.636,168.117
+,2022,Military Exercises,Australia,Fiji,Fijian infantrymen set the standard,https://www.defence.gov.au/new...,-17.7183,177.9015
+,2021,Military Exercises,Australia,Fiji,Coral Warrior gets underway in Fiji,https://www.defence.gov.au/new...,-17.8889,177.9612
+,2023,Military Exercises,New Zealand,Fiji,NZDF personnel 'live in the bush' with Fiji soldiers to strengthen defence ties,https://www.rnz.co.nz/internat...,-17.4866,177.7683
+,2023,Military Exercises,New Zealand,Fiji,NZDF Trials Beach Landing Equipment In Fiji,https://pacific.scoop.co.nz/20...,-17.9227,177.4527
+,2022,Military Exercises,New Zealand,Fiji,NZ Army in large scale military exercise in Fiji,https://www.youtube.com/watch?...,-17.9533,177.2454
+,2023,Military Exercises,"United Kingdom, Australia, United States of America, New Zealand",Fiji,Exercise Cartwheel 2023,https://twitter.com/RFMF_Defen...,-17.6779,177.5508
+,2022,Military Exercises,"United Kingdom, Australia, United States of America, New Zealand",Fiji,Exercise Cartwheel 2022,https://fj.usembassy.gov/exerc...,-17.6214,177.3925
+,2023,Military Exercises,United States of America,Fiji,Exercise Cartwheel 2023: The Nevada National Guard paired with the Fijian Armed Forces,https://twitter.com/USNational...,-17.7782,177.5431
+,2023,Military Exercises,United States of America,Fiji,The Pacific Partnership 23 Band marched alongside the RFMF and navy for the change of guard ceremony,https://twitter.com/USEmbassyS...,-17.9858,177.3812
+,2023,Military Exercises,United States of America,Fiji,The PacificPartnership23 joined the @RFMF_Defence and @FijiNavy band,https://twitter.com/USEmbassyS...,-17.9989,177.2775
+,2023,Military Exercises,United States of America,Fiji,The Pacific Partnership 2023 Band performs alongside the Royal Australian and New Zealand navies in Fiji,https://www.facebook.com/10006...,-17.8904,177.5211
+,2023,Military Exercises,United States of America,Fiji,The Pacific Partnership 2023 Rock Band wowed audiences around Suva with their songs,https://twitter.com/fijitimes/...,-17.5547,177.4248
+,2023,Military Exercises,Australia,Papua New Guinea,Exercise Pukpuk,https://twitter.com/AusHCPNG/s...,-6.2158,146.8329
+,2023,Military Exercises,Australia,Papua New Guinea,Old friends reunite in PNG for Exercise Pukpuk,https://www.defence.gov.au/new...,-6.4569,146.3159
+,2023,Military Exercises,Australia,Papua New Guinea,PNG's first Talisman Sabre,https://www.defence.gov.au/new...,-6.2218,147.0181
+,2023,Military Exercises,Australia,Papua New Guinea,Talisman Sabre,https://twitter.com/DefenceAus...,-5.6959,145.2137
+,2023,Military Exercises,Australia,Papua New Guinea,Olgeta Warrior Exercise 2023,https://www.youtube.com/watch?...,-5.9538,146.7482
+,2023,Military Exercises,Japan,Papua New Guinea,Japan-Papua New Guinea Goodwill Exercise,https://www.mod.go.jp/msdf/en/...,-5.6158,144.7645
+,2023,Military Exercises,New Zealand,Papua New Guinea,New Zealand Army Cadets visited PNGDF Cadets,https://twitter.com/ddotaona/s...,-6.2785,145.4885
+,2023,Military Exercises,United States of America,Papua New Guinea,US-PNG Joint Military Exercise,https://www.pacom.mil/Media/Ne...,-6.0418,145.5782
+,2022,Military Exercises,United States of America,Papua New Guinea,US Army and the Papua New Guinea Defense Force conclude Three-week Joint Military Exercise,https://pg.usembassy.gov/usa-p...,-6.0979,146.5509
+,2021,Military Exercises,United States of America,Papua New Guinea,Tamiok Strike 2021,https://twitter.com/8thTSC/sta...,-5.6521,145.9931
+,2023,Military Exercises,Australia,"Papua New Guinea, Fiji, Tonga","PNG, Fiji, Tonga participate in Talisman Sabre 2023",https://islandsbusiness.com/ne...,-6.0368,145.8957
+,2023,Military Exercises,Australia,Samoa,ADF deters illegal fishing in the Pacific through Operation Solania,https://www.defence.gov.au/new...,-13.759,-172.1046
+,2023,Military Exercises,Australia,Tonga,Exercise Talisman Sabre,https://twitter.com/DefenceAus...,-20.802,-174.921
+,2022,Military Exercises,Japan,Tonga,"Japan, Tonga navy hold first joint drill amid China tensions",https://www.scmp.com/news/asia...,-20.803,-175.105
+,2022,Military Exercises,United States of America,Tonga,Tongan contingent joining US-led RIMPAC 2022,https://matangitonga.to/2022/0...,-20.878,-179.34
+,2019,Military Exercises,United States of America,Tonga,"Tongan Marines excel in ""Best Warrior"" contest, Nevada",https://matangitonga.to/2019/0...,-21.139,-175.21
+,2018,Military Exercises,United States of America,Tonga,Tonga in U.S. led RIMPAC 2018,https://matangitonga.to/2018/0...,-20.799,-175.234
+,2020,Military Medical Diplomacy,Australia,Fiji,Crew on board Adelaide test negative for Covid-19,https://www.fijitimes.com.fj/c...,-17.8901,177.9412
+,2023,Military Medical Diplomacy,Australia,Papua New Guinea,Mentoring fellow medics in PNG,https://www.defence.gov.au/new...,-5.4507,147.1617
+,2023,Military Medical Diplomacy,China,Solomon Islands,Hospital Ship Peace Ark engages in cultural exchange with local school in Solomon Islands,http://eng.mod.gov.cn/xb/News_...,-9.1474,160.011
+,2023,Military Medical Diplomacy,China,Tonga,Chinese naval hospital ship concludes visit to Tonga,http://eng.mod.gov.cn/xb/Milit...,-20.918,-175.072
+,2023,Military Medical Diplomacy,China,Tonga,Peace Ark conducts medical rescue drills in W/Pacific,http://eng.chinamil.com.cn/CHI...,-20.977,-175.141
+,2023,Military Medical Diplomacy,China,Tonga,Hospital ship 'Peace Ark' docks at Vuna Wharf,https://matangitonga.to/2023/0...,-21.187,-175.089
+,2023,Military Medical Diplomacy,China,Vanuatu,"Chinese, Vanuatu military doctors complete tumor resection operation on Peace Ark",http://eng.mod.gov.cn/xb/Milit...,-17.899,168.157
+,2023,Military Medical Diplomacy,China,Vanuatu,"Chinese, Vanuatu military doctors complete tumor resection operation on Peace Ark",http://eng.mod.gov.cn/xb/Milit...,-17.859,168.286
+,2023,MIL-POL Engagement,China,Fiji,Fiji to potentially cut its policing agreement with China,https://www.fbcnews.com.fj/new...,-17.5089,177.2376
+,2020,MIL-POL Engagement,New Zealand,Fiji,NZ Police reaffirm support for Fiji,https://www.fbcnews.com.fj/new...,-17.8379,177.3718
+,2021,MIL-POL Engagement,United Kingdom,Fiji,British Government assures Force support in cooperation programs,https://www.fijitimes.com/brit...,-17.8331,177.7025
+,2023,MIL-POL Engagement,Australia,Solomon Islands,ADF trains Royal Solomon Islands Police Force officers in small boats handling,https://twitter.com/AusHCSols/...,-9.2885,160.091
+,2023,MIL-POL Engagement,Australia,Solomon Islands,Exercise Coastwatchers trains more than 140 police officers,https://indepthsolomons.com.sb...,-8.1968,157.735
+,2023,MIL-POL Engagement,Australia,Solomon Islands,"Australia to send more police to Solomon Islands, extend mission",https://www.aljazeera.com/news...,-9.6386,160.218
+,2023,MIL-POL Engagement,Australia,Solomon Islands,RSIPF Maritime receives two double cabin land cruiser from Defence Cooperation Program,https://www.rsipf.gov.sb/?q=no...,-9.7582,160.059
+,2023,MIL-POL Engagement,Australia,Solomon Islands,"RSIPF Gifted with World Class Capabilities, thanks to Australia",https://www.sibconline.com.sb/...,-8.7197,160.791
+,2021,MIL-POL Engagement,Australia,Solomon Islands,Patrol boat pair delivered to Solomon Islands Police,https://www.bairdmaritime.com/...,-9.0937,159.94
+,2020,MIL-POL Engagement,Australia,Solomon Islands,RSIPF officers undertake Maritime Safety training,https://solomons.gov.sb/rsipf-...,-8.1373,157.171
+,2021,MIL-POL Engagement,Australia,Tonga,Tonga police partners with AFP,https://matangitonga.to/2021/0...,-20.818,-175.029
+,2023,MIL-POL Engagement,Australia,Vanuatu,AFP and Vanuatu Police unveil new police and justice precinct,https://www.afp.gov.au/news-ce...,-17.512,168.297
+,2023,MIL-POL Engagement,Australia,Vanuatu,ADF supports VMF in infrastructure development and policing work,https://twitter.com/AusHCVanua...,-17.545,168.244
+,2023,MIL-POL Engagement,Australia,Vanuatu,AFP donates automated external defibrillators to Vanuatu Police Force,https://www.afp.gov.au/news-ce...,-17.764,168.018
+,2021,MIL-POL Engagement,Australia,Vanuatu,Enhanced infrastructure for the Vanuatu Police Force,https://www.minister.defence.g...,-17.593,168.125
+,2021,MIL-POL Engagement,Australia,Vanuatu,Cook Barracks and Tiroas Barracks Redevelopment (Vanuatu),https://www.afp.gov.au/news-ce...,-17.8,168.116
+,2023,MIL-POL Engagement,China,Vanuatu,Chinese police experts arrive in Vanuatu amid political crisis,https://www.reuters.com/world/...,-17.973,168.184
+,2023,MIL-POL Engagement,China,Vanuatu,Chinese government donates VT34.43 million worth of Police supplies to VPF,https://www.dailypost.vu/news/...,-17.648,168.09
+,2022,MIL-POL Engagement,Japan,Vanuatu,Japan-Vanuatu Goodwill Exercise 2022,https://www.mod.go.jp/msdf/en/...,-17.525,168.048
+,2021,MIL-POL Engagement,Japan,Vanuatu,Japan-Vanuatu Goodwill Exercise 2021,https://www.mod.go.jp/msdf/en/...,-17.745,168.227
+,2021,MIL-POL Engagement,Japan,Vanuatu,"Japan Maritime Force, Vanuatu Maritime strengthen defence cooperation",https://www.dailypost.vu/news/...,-17.713,168.275
+,2023,MIL-POL Engagement,United States of America,Vanuatu,SATMO team works alongside U.S. partners during beach cleanup in Vanuatu,https://www.army.mil/article/2...,-17.867,168.048
+,2018,MIL-POL Engagement,Australia,Vanuatu,Australian Navy Chief visits Vanuatu's Police Maritime Wing,https://police.gov.vu/media-ne...,-17.751,168.238
+,2018,MIL-POL Engagement,China,Vanuatu,Handing over of VMF Band instruments and sports equipment,https://police.gov.vu/media-ne...,-17.652,168.443
+,2023,Sports Diplomacy (Defence),Australia,Papua New Guinea,PNGDF women double score sees off ADF women,https://pnghausbung.com/pngdf-...,-6.2968,145.9508
+,2023,Sports Diplomacy (Defence),Australia,Papua New Guinea,Touch down in PNG,https://www.defence.gov.au/new...,-5.6829,144.9871
+,2023,Sports Diplomacy (Defence),China,Papua New Guinea,The PNG Defense Football team hosted the Chinese Navy Cadet team in Port Moresby,https://www.linkedin.com/posts...,-5.6977,146.2398
+,2023,Sports Diplomacy (Defence),Australia,Solomon Islands,Solomon Islands Police Fully Prepared for Pacific Games,https://www.miragenews.com/sol...,-8.1065,157.143
+,2023,Sports Diplomacy (Defence),Australia,Solomon Islands,"AHC joins PM Sogavare today for a day of events, announcements and support for the Pacific Games",https://twitter.com/AusHCSols/...,-10.2059,161.004
+,2023,Training,Australia,Fiji,RAAF team delivers critical training in Fiji,https://www.defence.gov.au/new...,-17.7745,177.4286
+,2023,Training,Australia,Fiji,Australian Civ-Mil Centre supports Fiji to establish its National Emergency Response Team,https://twitter.com/AustCivMil...,-17.3568,178.0345
+,2022,Training,Australia,Fiji,ADF and RFMF joint exercise,https://pina.com.fj/2022/03/14...,-17.3925,177.7302
+,2022,Training,Australia,Fiji,Fijian soldiers welcome training in Brisbane,https://www.defence.gov.au/new...,-17.881,177.5832
+,2021,Training,Australia,Fiji,Fijian soldiers depart for military training,https://www.fijitimes.com/fiji...,-17.7654,177.8335
+,2020,Training,Australia,Fiji,First RFMF member to graduate from ADFA,https://www.fijitimes.com/sail...,-17.6661,177.7864
+,2023,Training,China,Fiji,"UN Staff Officer Courses, Beijing",https://twitter.com/ChineseEmb...,-17.8091,177.3078
+,2023,Training,China,Fiji,RFMF Officers off to China for study,https://twitter.com/ChineseEmb...,-17.8997,177.6803
+,2021,Training,China,Fiji,RFMF senior officers receive their Masters in Military Science degrees,https://www.fijitimes.com/rfmf...,-17.7896,177.8541
+,2023,Training,France,Fiji,Fiji ratifies the Status of Forces Agreement with France,https://www.fbcnews.com.fj/new...,-17.8788,177.8017
+,2023,Training,New Zealand,Fiji,More K9 dogs added to assist in curbing crimes,https://www.fbcnews.com.fj/new...,-17.9801,177.6493
+,2020,Training,New Zealand,Fiji,Radio operators course for Fiji Navy,https://www.fijitimes.com/radi...,-17.5468,177.8176
+,2023,Training,Papua New Guinea,Fiji,The PNGDF and Fijian military personnel participated in industrial training,https://www.linkedin.com/posts...,-17.865,177.6428
+,2023,Training,United States of America,Fiji,First female RFMF gradautes from US Military College,https://twitter.com/USEmbassyS...,-17.5432,177.8745
+,2022,Training,United States of America,Fiji,Fiji military receives EOD equipment and training from the United States,https://www.pacom.mil/Media/Ne...,-17.8206,177.57
+,2021,Training,United States of America,Fiji,Forging US-Fiji military partnerships in the classroom,https://spiritofamerica.org/us...,-17.6887,177.4119
+,2019,Training,United States of America,Fiji,Operation Cartwheel 2019 medical training,https://twitter.com/HELIPRO_FI...,-17.8363,177.6677
+,2023,Training,Australia,Papua New Guinea,A love of sport an asset in the Pacific,https://www.defence.gov.au/new...,-6.5897,145.8656
+,2023,Training,Australia,Papua New Guinea,ADF-PNGDF Weapons Lessons,https://twitter.com/DefenceAus...,-5.5243,147.1615
+,2023,Training,Australia,Papua New Guinea,Australian Army Mentoring/Training Team,https://twitter.com/ChiefAusAr...,-4.8934,145.0178
+,2023,Training,Australia,Papua New Guinea,DOD staff undergo two week training,https://pnghausbung.com/dod-st...,-5.8122,144.2043
+,2023,Training,Australia,Papua New Guinea,Operator maintenance,https://twitter.com/ADFinPNG/s...,-5.6638,146.6378
+,2023,Training,Australia,Papua New Guinea,PNG officer reunited with Australian soldiers,https://www.defence.gov.au/new...,-6.542,147.0097
+,2023,Training,Australia,Papua New Guinea,Sappers who dig together stay together,https://www.defence.gov.au/new...,-6.4622,147.0087
+,2023,Training,Australia,Papua New Guinea,Scenario-based training,https://twitter.com/ADFinPNG/s...,-6.2107,146.0864
+,2023,Training,Australia,Papua New Guinea,ADF soldiers taking part in the PNGDF Public Affairs Course,https://twitter.com/taylor____...,-6.2408,146.3537
+,2023,Training,Australia,Papua New Guinea,ADF personnel attend the Smartphone Public Affairs Course with PNG counterparts,https://twitter.com/taylor____...,-6.2634,144.7139
+,2023,Training,Australia,Papua New Guinea,RAAF C-27 Spartan aids PNG,https://www.contactairlandands...,-5.9511,146.6703
+,2023,Training,Australia,Papua New Guinea,The ADF and the PNGDF Smartphone Public Affairs Course tracking nicely,https://www.linkedin.com/posts...,-6.3505,145.8328
+,2023,Training,Australia,Papua New Guinea,ACMC supports civ-mil engagement and disaster preparedness in PNG,https://twitter.com/AustCivMil...,-6.3693,146.2884
+,2023,Training,Australia,Papua New Guinea,PNGDF Officers completed Logistics Operations Course,https://www.linkedin.com/posts...,-5.6942,144.6513
+,2020,Training,Australia,Papua New Guinea,ADF supports PNG Rugby League,https://www.minister.defence.g...,-5.4546,146.4748
+,2023,Training,China,Papua New Guinea,Son sails in on Chinese Navy training ship,https://www.postcourier.com.pg...,-5.5549,146.3172
+,2023,Training,United States of America,Papua New Guinea,Latest exchange could make lasting impact in State Partnership Program,https://www.dvidshub.net/news/...,-5.4825,145.1242
+,2023,Training,"United States of America, United Kingdom, Australia",Papua New Guinea,Soldiers from the Pacific Partnership Team 2023 had STEM sessions with students,https://www.linkedin.com/posts...,-5.9733,146.1766
+,2023,Training,Australia,"Papua New Guinea, Fiji, Tonga",Pacific Partnership 2023,https://twitter.com/DefenceAus...,-6.071,145.4284
+,2023,Training,United States of America,"Papua New Guinea, Fiji, Tonga",Training future military leaders,https://www.whitehouse.gov/bri...,-6.2087,145.2348
+,2023,Training,Australia,Solomon Islands,ACMC supports training delivered by the Solomon Islands National Emergency Response Team,https://twitter.com/AustCivMil...,-9.2026,160.18
+,2023,Training,Australia,Solomon Islands,Delivering life-saving training skills,https://www.defence.gov.au/new...,-9.4285,160.034
+,2023,Training,China,Solomon Islands,Third China's PLT farewelled by RSIPF,https://www.rsipf.gov.sb/?q=no...,-10.9398,161.04
+,2023,Training,New Zealand,Solomon Islands,"NZ Police and RSIPF deliver 5 Step Mindset training programme at Rove Academy, Honiara",https://www.rsipf.gov.sb/?q=no...,-9.2013,160.143
+,2023,Training,United Kingdom,Solomon Islands,UK police experts provide two days’ workshop on Command Awareness in preparation for the PG23 to RSIPF,https://www.rsipf.gov.sb/?q=no...,-9.3042,160.181
+,2023,Training,Australia,Tonga,Australian Defence assists HMAF,https://matangitonga.to/2023/0...,-21.148,-175.103
+,2021,Training,Australia,Tonga,Tongan students become combative masters,https://matangitonga.to/2021/1...,-20.931,-175.248
+,2020,Training,Australia,Tonga,Proud Tongan graduates from Royal Australian Naval College,https://www.looptonga.com/tong...,-21.113,-175.167
+,2019,Training,"Australia, New Zealand, France, United States of America",Tonga,Multi-national military training in Tongatapu,https://matangitonga.to/2019/0...,-20.902,-175.112
+,2022,Training,Australia,Vanuatu,7 VMF Engineers Receives their Certificate in Carpentry,https://police.gov.vu/media-ne...,-17.709,168.201
+,2021,Training,Australia,Vanuatu,VMF female cadets studying to become platoon commanders,https://www.dailypost.vu/news/...,-17.583,168.221
+,2020,Training,United Kingdom,Vanuatu,VIPAM Manager attends Regional Strategic Leadership Program,https://www.dailypost.vu/news/...,-17.562,168.157
+,2020,Training,United Kingdom,"Vanuatu, Fiji, Papua New Guinea",South Pacific Strategic Leadership Program delivered across six time zones,https://www.cranfield.ac.uk/pr...,-17.802,168.237
+,2023,"Training, Visit diplomacy, Defence infrastructure",Australia,Papua New Guinea,Australia-PNG Defence Cooperation Program,https://twitter.com/AusHCPNG/s...,-6.1179,147.2026
+,2023,Visit Diplomacy,Australia,Fiji,Navy to navy talks,https://twitter.com/FijiNavy/s...,-17.9998,177.6355
+,2023,Visit Diplomacy,Australia,Fiji,Australian War College delegation met with high-ranking Fijian officials,https://twitter.com/EroniDuaib...,-17.7606,177.8411
+,2023,Visit Diplomacy,Australia,Fiji,The RFN hosted RADM Jonathan Earley of the Australian Navy in Suva,https://twitter.com/FijiNavy/s...,-17.5051,177.7194
+,2023,Visit Diplomacy,Australia,Fiji,Fijian PM visits Gallipoli Barracks in Brisbane,https://twitter.com/PatConroy1...,-17.4575,177.6977
+,2023,Visit Diplomacy,"Australia, New Zealand",Fiji,Tikoduadua meets with regional Defence Chiefs,https://www.fbcnews.com.fj/new...,-17.8549,177.8278
+,2023,Visit Diplomacy,China,Fiji,Chinese naval ship Qi Jiguang on good-will visit to Fiji,https://twitter.com/fijitimes/...,-17.5987,177.4984
+,2023,Visit Diplomacy,China,Fiji,Chinese naval ship Qi Jiguang arrives in Fiji,https://twitter.com/Benfdef/st...,-17.9723,177.3052
+,2023,Visit Diplomacy,China,Fiji,Chinese naval ship Qi Jiguang receives a warm reception in Fiji,https://twitter.com/ChineseEmb...,-17.8627,177.2045
+,2023,Visit Diplomacy,China,Fiji,Senior Task Commanders of Chinese Navy ship Qi Jiguang paid a courtesy call on Fijian FM,https://twitter.com/ChineseEmb...,-17.8294,177.959
+,2023,Visit Diplomacy,France,Fiji,Fiji to sign defence agreement with France,https://pina.com.fj/2023/09/01...,-17.6475,177.9034
+,2023,Visit Diplomacy,France,Fiji,Senior French army officer welcomed to Fiji,https://twitter.com/ambafrance...,-17.5241,177.7243
+,2023,Visit Diplomacy,Indonesia,Fiji,Indonesian Ambassador to Fiji meets Fiji's Army Commander,https://twitter.com/SimamoraDu...,-17.946,177.5234
+,2023,Visit Diplomacy,Nepal,Fiji,Nepal committed to working together with Fiji,https://www.fbcnews.com.fj/new...,-17.6305,177.3299
+,2023,Visit Diplomacy,United Kingdom,Fiji,"Veterans’ Minister attends National Day, deepening UK-Fiji ties",https://www.gov.uk/government/...,-17.7652,177.8477
+,2023,Visit Diplomacy,United Kingdom,Fiji,UK Defence Attache in Fiji meets senior Fijian army officials,https://twitter.com/UK_DA_Paci...,-17.9443,177.9122
+,2023,Visit Diplomacy,United Kingdom,Fiji,UK's Defence Chief visited Fiji's Defence Chief,https://twitter.com/RFMF_Defen...,-17.6492,177.4934
+,2023,Visit Diplomacy,United Kingdom,Fiji,"AVM Mick Smeath’s visits RFMF at Strategic HQ, Land Forces, Officer Training Centre and RFN Stanley Brown",https://twitter.com/UK_DA_Paci...,-17.7582,177.1369
+,2023,Visit Diplomacy,United States of America,Fiji,US commander on a two-day Fiji visit,https://www.fijitimes.com.fj/u...,-17.5681,177.4782
+,2023,Visit Diplomacy,United States of America,Fiji,Fiji navy officer attends International Seapower Symposium in the US,https://twitter.com/TNatuva/st...,-17.9366,177.7993
+,2023,Visit Diplomacy,"United States of America, China",Fiji,Chinese military delegation joins US-hosted defence conference in Fiji,https://www.reuters.com/busine...,-17.9072,177.2468
+,2023,Visit Diplomacy,Australia,Papua New Guinea,PNG-Australia Defence Cooperation Program,https://png.embassy.gov.au/pms...,-6.0716,147.0821
+,2023,Visit Diplomacy,Australia,Papua New Guinea,"Australia's Defence Minister hosts his PNG counterpart, reflecting on Defence Partnership",https://www.linkedin.com/posts...,-6.4302,146.2734
+,2023,Visit Diplomacy,Australia,Papua New Guinea,PNG military leader to serve as deputy commander of Australian Army's 3rd Brigade in Townsville,https://www.abc.net.au/news/20...,-6.0571,145.7089
+,2021,Visit Diplomacy,Australia,Papua New Guinea,46th Anniversary celebrations for the PNGDF Air Transport Wing,https://twitter.com/ADFinPNG/s...,-5.8162,145.6407
+,2020,Visit Diplomacy,"Australia, Canada, France, India, Indonesia, Japan, United Kingdom, United States of America",Papua New Guinea,Foreign Defence Attaches and Advisers to PNG,https://twitter.com/CDF_PNGDF/...,-5.4741,145.6822
+,2023,Visit Diplomacy,China,Papua New Guinea,The People's Liberation Army Navy training vessel Qi Jiguang visits Port Moresby,https://www.linkedin.com/posts...,-5.7369,146.1674
+,2023,Visit Diplomacy,China,Papua New Guinea,PM Marape attends 74th Anniversary of the Founding of the PRC on naval ship,https://www.linkedin.com/posts...,-5.9696,145.8479
+,2023,Visit Diplomacy,China,Papua New Guinea,Chinese naval training ship arrives in PNG for goodwill visit,https://www.defenceconnect.com...,-5.5204,144.8818
+,2023,Visit Diplomacy,United Kingdom,Papua New Guinea,British High Commissioner (PNG) hosted Director of International Security from the UK Ministry of Defence,https://www.linkedin.com/posts...,-5.9823,146.3199
+,2023,Visit Diplomacy,United States of America,Papua New Guinea,First PNGDF officer in Ship Rider deployment,https://www.postcourier.com.pg...,-6.3157,145.5754
+,2023,Visit Diplomacy,United States of America,Papua New Guinea,US-PNG Defence Cooperation Agreement,https://www.theguardian.com/wo...,-5.5239,145.4473
+,2023,Visit Diplomacy,United States of America,Papua New Guinea,US-PNG concludes historic patrol,https://www.looppng.com/png-ne...,-6.3965,145.7475
+,2023,Visit Diplomacy,United States of America,Papua New Guinea,US Indo-Pacific Commander in Papua New Guinea,https://pg.usembassy.gov/u-s-i...,-5.5527,146.2298
+,2023,Visit Diplomacy,United States of America,Papua New Guinea,Pacific Partnership 2023 Returns to Papua New Guinea,https://www.navy.mil/Press-Off...,-6.2861,144.9611
+,2022,Visit Diplomacy,United States of America,Papua New Guinea,Task Force Oceania’s Pacific Augmentation Team Forges a New Path in Papua New Guinea,https://pg.usembassy.gov/usa-p...,-5.6095,145.8272
+,2021,Visit Diplomacy,United States of America,Papua New Guinea,Task Force Oceania,https://www.looppng.com/png-ne...,-6.2879,145.7129
+,2023,Visit Diplomacy,China,"Papua New Guinea, Fiji",Chinese naval ship visits PNG and Fiji for training,https://news.cgtn.com/news/202...,-6.0199,145.3362
+,2023,Visit Diplomacy,China,"Papua New Guinea, Fiji",China's navy in Pacific Island ports,https://twitter.chttps://thedi...,-5.4963,145.1105
+,2022,Visit Diplomacy,Australia,Solomon Islands,ADV Reliant arrives in Honiara for Inauguration Pacific Tour,https://sbm.sb/adv-reliant-arr...,-10.9316,162.248
+,2023,Visit Diplomacy,Australia,Tonga,ADF Chief visits HMAF of Tonga,https://twitter.com/AustHCTong...,-21.136,-175.216
+,2022,Visit Diplomacy,Australia,Tonga,Tonga-Australia Defence Cooperation Talks strengthens cooperation,https://matangitonga.to/2022/1...,-20.935,-175.128
+,2019,Visit Diplomacy,Australia,Tonga,Three RAN ships visit Tonga,https://nepituno.to/index.php/...,-21.085,-175.191
+,2023,Visit Diplomacy,France,Tonga,Prime Minister and Minister responsible for HMAF meets French Minister of Defence,https://www.gov.to/press-relea...,-20.968,-175.072
+,2023,Visit Diplomacy,Japan,Tonga,Shiranui welcomes Crown Prince of Tonga,https://matangitonga.to/2023/0...,-20.826,-175.176
+,2023,Visit Diplomacy,Japan,Tonga,Japanese destroyer arrives in Nuku'alofa,https://matangitonga.to/2023/0...,-21.018,-175.161
+,2022,Visit Diplomacy,New Zealand,Tonga,Two NZ navy ships in Tonga,https://matangitonga.to/2022/0...,-20.878,-175.186
+,2022,Visit Diplomacy,United States of America,Tonga,US Admiral welcomed by HMAF and Acting PM,https://matangitonga.to/2022/0...,-20.912,-175.138
+,2023,Visit Diplomacy,France,Vanuatu,France's surveillance frigate Vendémiaire visits Port Vila,https://twitter.com/jeangene_v...,-17.966,168.116
+,2023,Visit Diplomacy,France,Vanuatu,Open days for the French Navy in Vanuatu,https://twitter.com/jeangene_v...,-17.938,168.19
+,2019,Visit Diplomacy,Australia,Papua New Guinea,PNG-Australia Partnership,https://twitter.com/ADFinPNG/s...,-6.314,143.955
+,2018,Visit Diplomacy,France,Vanuatu,“Vendémiaire” part of Remembrance commemoration in Port Vila,https://www.dailypost.vu/news/...,-17.986,168.508
