@@ -507,7 +507,13 @@ map.on('load', () => {
           },
           paint: {
             'circle-radius': 7, // size of circles
-            'circle-color': '#3D2E5D', // color of circles
+            'circle-color': [
+              'match',
+              ['get', 'Colour'],
+              'Broad', '#808080', // Color for Category1
+              'Specific', '#3D2E5D', // Color for Category2
+              '#808080' // Default color if no match
+            ],
             'circle-stroke-color': 'white',
             'circle-stroke-width': 1,
             'circle-opacity': 0.7,
