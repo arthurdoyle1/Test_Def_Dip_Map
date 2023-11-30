@@ -10,7 +10,7 @@ const config = {
   zoom: 5.5,
   title: 'Defence Diplomacy Interactive Map Tracker',
   description:
-    'The Defence Diplomacy Interactive Map Tracker is a beta version web tool designed to provide a dynamic and interactive map experience for tracking defense diplomacy activities in the Pacific. Please note that, as a beta release, the accuracy of the displayed locations may vary. Users are encouraged to explore the map for an overview of defense diplomacy initiatives.',
+    'The Defence Diplomacy Interactive Map Tracker is a beta version web tool designed to provide a dynamic and interactive map experience for tracking defense diplomacy activities in the Pacific.',
   sideBarInfo: ['Diplomacy_category', 'Comments', 'Delivering_Country', 'Receiving_Countries'],
   popupInfo: ['Location_Name'],
   filters: [
