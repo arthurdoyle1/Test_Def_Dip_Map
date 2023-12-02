@@ -456,10 +456,6 @@ function sortByDistance(selectedPoint) {
   buildLocationList(data);
 }
 
-geocoder.on('result', (ev) => {
-  const searchResult = ev.result.geometry;
-  sortByDistance(searchResult);
-});
 
 map.on('load', () => {
   map.addControl(geocoder, 'top-right');
