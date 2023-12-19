@@ -18,6 +18,13 @@ const map = new mapboxgl.Map({
   transformRequest: transformRequest,
 });
 
+const cluster = new supercluster({
+  radius: 40, // adjust the cluster radius as needed
+  maxZoom: 15, // adjust the max zoom level for clustering
+});
+
+cluster.load(geojsonData.features);
+
 function flyToLocation(currentFeature) {
   map.flyTo({
     center: currentFeature,
@@ -518,6 +525,34 @@ map.on('load', () => {
       },
     );
 
+    map.addLayer({
+      id: 'clusters',
+      type: 'circle',
+      source: {
+        type: 'geojson',
+        data: cluster,
+        cluster: true,
+        clusterMaxZoom: 14, // adjust the max zoom level for clustering
+        clusterRadius: 50, // adjust the cluster radius as needed
+      },
+      paint: {
+        'circle-color': [
+          'step',
+          ['get', 'point_count'],
+          '#51bbd6',
+          100, '#f1f075',
+          750, '#f28cb1',
+        ],
+        'circle-radius': [
+          'step',
+          ['get', 'point_count'],
+          20,
+          100, 30,
+          750, 40,
+        ],
+      },
+    });
+
     map.on('click', 'locationData', (e) => {
       const features = map.queryRenderedFeatures(e.point, {
         layers: ['locationData'],
@@ -537,6 +572,25 @@ map.on('load', () => {
     });
     buildLocationList(geojsonData);
   }
+});
+
+map.on('click', 'clusters', (e) => {
+  const features = map.queryRenderedFeatures(e.point, { layers: ['clusters'] });
+  const clusterId = features[0].properties.cluster_id;
+
+  // Use Supercluster's `getLeaves` to get individual points within a cluster
+  const leaves = cluster.getLeaves(clusterId, Infinity);
+
+  // Use the first point in the cluster for flying and creating a popup
+  const clickedPoint = leaves[0].geometry.coordinates;
+
+  flyToLocation(clickedPoint);
+  sortByDistance(clickedPoint);
+
+  // Create a combined properties object for the popup
+  const combinedProperties = Object.assign({}, ...leaves.map(leaf => leaf.properties));
+
+  createPopup({ geometry: { coordinates: clickedPoint }, properties: combinedProperties });
 });
 
 // Modal - popup for filtering results
