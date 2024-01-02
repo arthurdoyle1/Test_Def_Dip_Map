@@ -488,113 +488,36 @@ map.on('load', () => {
         delimiter: ',',
       },
       (err, data) => {
-        if (err) throw err;
-        data.features.forEach((feature, i) => {
-          feature.properties.id = i;
+        data.features.forEach((data, i) => {
+          data.properties.id = i;
         });
-  
+
         geojsonData = data;
-  
-        map.addSource('locationData', {
-          type: 'geojson',
-          data: geojsonData,
-          cluster: true,
-          clusterMaxZoom: 14,
-          clusterRadius: 50,
-        });
-  
+        // Add the the layer to the map
         map.addLayer({
-          id: 'clusters',
+          id: 'locationData',
           type: 'circle',
-          source: 'locationData',
-          filter: ['has', 'point_count'],
+          source: {
+            type: 'geojson',
+            data: geojsonData,
+          },
           paint: {
+            'circle-radius': 7, // size of circles
             'circle-color': [
-              'step',
-              ['get', 'point_count'],
-              '#51bbd6',
-              100,
-              '#f1f075',
-              750,
-              '#f28cb1',
+              'match',
+              ['get', 'Colour'],
+              'Broad', '#808080', // Color for Category1
+              'Specific', '#3D2E5D', // Color for Category2
+              '#808080' // Default color if no match
             ],
-            'circle-radius': [
-              'step',
-              ['get', 'point_count'],
-              20,
-              100,
-              30,
-              750,
-              40,
-            ],
-          },
-        });
-  
-        map.addLayer({
-          id: 'cluster-count',
-          type: 'symbol',
-          source: 'locationData',
-          filter: ['has', 'point_count'],
-          layout: {
-            'text-field': '{point_count_abbreviated}',
-            'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
-            'text-size': 12,
-          },
-        });
-  
-        map.addLayer({
-          id: 'unclustered-point',
-          type: 'circle',
-          source: 'locationData',
-          filter: ['!', ['has', 'point_count']],
-          paint: {
-            'circle-color': '#11b4da',
-            'circle-radius': 4,
+            'circle-stroke-color': 'white',
             'circle-stroke-width': 1,
-            'circle-stroke-color': '#fff',
+            'circle-opacity': 0.7,
           },
         });
-  
-        // when a click event occurs on a feature in the clusters layer, zoom in
-        map.on('click', 'clusters', function (e) {
-          var features = map.queryRenderedFeatures(e.point, {
-            layers: ['clusters']
-          });
-          var clusterId = features[0].properties.cluster_id;
-          map.getSource('locationData').getClusterExpansionZoom(clusterId, function (err, zoom) {
-            if (err) return;
-  
-            map.easeTo({
-              center: features[0].geometry.coordinates,
-              zoom: zoom
-            });
-          });
-        });
-  
-        // When a click event occurs on a feature in the unclustered-point layer, open a popup at the location of the feature
-        map.on('click', 'unclustered-point', function (e) {
-          var coordinates = e.features[0].geometry.coordinates.slice();
-          var properties = e.features[0].properties;
-          
-          // Ensure that if the map is zoomed out such that multiple copies of the feature are visible, the popup appears over the copy being pointed to
-          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-          }
-  
-          createPopup(e.features[0]);
-        });
-  
-        map.on('mouseenter', 'clusters', function () {
-          map.getCanvas().style.cursor = 'pointer';
-        });
-        map.on('mouseleave', 'clusters', function () {
-          map.getCanvas().style.cursor = '';
-        });
-      }
+      },
     );
-  }
-  
-  
+
     map.on('click', 'locationData', (e) => {
       const features = map.queryRenderedFeatures(e.point, {
         layers: ['locationData'],
@@ -614,7 +537,7 @@ map.on('load', () => {
     });
     buildLocationList(geojsonData);
   }
-);
+});
 
 // Modal - popup for filtering results
 const filterResults = document.getElementById('filterResults');
