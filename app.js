@@ -488,36 +488,80 @@ map.on('load', () => {
         delimiter: ',',
       },
       (err, data) => {
-        data.features.forEach((data, i) => {
-          data.properties.id = i;
+        if (err) throw err;
+        data.features.forEach((feature, i) => {
+          feature.properties.id = i;
         });
 
         geojsonData = data;
-        // Add the the layer to the map
+        
+        // Add a source for the GeoJSON data with clustering enabled
+        map.addSource('locationData', {
+          type: 'geojson',
+          data: geojsonData,
+          cluster: true,
+          clusterMaxZoom: 14, // Max zoom to cluster points
+          clusterRadius: 50 // Radius of each cluster when clustering points
+        });
+
+        // Add a layer for the clusters themselves
         map.addLayer({
-          id: 'locationData',
+          id: 'clusters',
           type: 'circle',
-          source: {
-            type: 'geojson',
-            data: geojsonData,
-          },
+          source: 'locationData',
+          filter: ['has', 'point_count'], // filter to show only clusters
           paint: {
-            'circle-radius': 7, // size of circles
+            // Use step expressions to increase the size of the cluster circle depending on the number of points
             'circle-color': [
-              'match',
-              ['get', 'Colour'],
-              'Broad', '#808080', // Color for Category1
-              'Specific', '#3D2E5D', // Color for Category2
-              '#808080' // Default color if no match
+              'step',
+              ['get', 'point_count'],
+              '#51bbd6',
+              100,
+              '#f1f075',
+              750,
+              '#f28cb1'
             ],
-            'circle-stroke-color': 'white',
+            'circle-radius': [
+              'step',
+              ['get', 'point_count'],
+              20,
+              100,
+              30,
+              750,
+              40
+            ]
+          }
+        });
+
+        // Add a layer for the cluster labels
+        map.addLayer({
+          id: 'cluster-count',
+          type: 'symbol',
+          source: 'locationData',
+          filter: ['has', 'point_count'], // filter to show only clusters
+          layout: {
+            'text-field': '{point_count_abbreviated}',
+            'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+            'text-size': 12
+          }
+        });
+
+        // Add a layer for the unclustered points
+        map.addLayer({
+          id: 'unclustered-point',
+          type: 'circle',
+          source: 'locationData',
+          filter: ['!', ['has', 'point_count']], // filter to show only non-clustered points
+          paint: {
+            'circle-color': '#11b4da',
+            'circle-radius': 4,
             'circle-stroke-width': 1,
-            'circle-opacity': 0.7,
-          },
+            'circle-stroke-color': '#fff'
+          }
         });
       },
-    );
-
+      );
+  
     map.on('click', 'locationData', (e) => {
       const features = map.queryRenderedFeatures(e.point, {
         layers: ['locationData'],
