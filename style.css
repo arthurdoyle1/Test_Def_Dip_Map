@@ -93,15 +93,3 @@
     display: block;
 
   }
-  
-  #slider-container {
-    /* Your styles for the slider container */
-    padding: 10px;
-    text-align: center;
-}
-
-#year-slider {
-    /* Your styles for the slider itself */
-    width: 80%;
-    margin: auto;
-}
