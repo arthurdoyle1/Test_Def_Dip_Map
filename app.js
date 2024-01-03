@@ -538,6 +538,24 @@ map.on('load', () => {
     buildLocationList(geojsonData);
   }
 });
+// After your map and geojson data are loaded
+document.getElementById('year-slider').addEventListener('input', function(e) {
+  const year = parseInt(e.target.value, 10);
+  document.getElementById('active-year').textContent = year;
+
+  // Update the map data filter
+  map.setFilter('locationData', ['==', ['get', 'Year'], year]);
+  
+  // This assumes that 'Year' is a property in your geojsonData features
+  // and 'locationData' is the id of the layer you want to filter
+});
+
+map.on('load', function() {
+  // Add source and initial layer here, as you have in your existing code
+  
+  // Set initial filter to the first year of your slider
+  map.setFilter('locationData', ['==', ['get', 'Year'], 2000]);
+});
 
 // Modal - popup for filtering results
 const filterResults = document.getElementById('filterResults');
