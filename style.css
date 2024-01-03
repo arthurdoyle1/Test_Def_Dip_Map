@@ -76,9 +76,11 @@
 .mapboxgl-popup-content {
     font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
     text-align: center;
-    padding: 5;
-    width: 180px;
-  }
+    padding: 5px; /* Corrected to include 'px' */
+    width: 180px; /* You might want to adjust this or set max-width instead */
+    word-wrap: break-word; /* Added to wrap long words */
+    overflow-wrap: break-word; /* Ensures overflow text is wrapped */
+}
 
 .mapboxgl-popup-close-button {
     display: none;
