@@ -4,11 +4,28 @@
 mapboxgl.accessToken = config.accessToken;
 const columnHeaders = config.sideBarInfo;
 
-let geojsonData = {};
+let geojsonData = {
+  type: 'FeatureCollection',
+  features: [],
+};
 const filteredGeojson = {
   type: 'FeatureCollection',
   features: [],
 };
+
+function filterMapByYear(year) {
+    const filteredFeatures = geojsonData.features.filter(function(feature) {
+        // Ensure Year is treated as a number
+        return parseInt(feature.properties.Year) === year;
+    });
+
+    if (map.getSource('locationData')) {
+        map.getSource('locationData').setData({
+            type: 'FeatureCollection',
+            features: filteredFeatures
+        });
+    }
+}
 
 const map = new mapboxgl.Map({
   container: 'map',
@@ -539,6 +556,15 @@ map.on('load', () => {
   }
 });
 
+// Slider Event Listener
+document.getElementById('year-slider').addEventListener('input', function(e) {
+  const selectedYear = parseInt(e.target.value, 10);
+  document.getElementById('slider-value').textContent = selectedYear;
+  filterMapByYear(selectedYear);
+});
+
+// Initialize map with the default year
+filterMapByYear(2018);
 
 // Modal - popup for filtering results
 const filterResults = document.getElementById('filterResults');
