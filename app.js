@@ -1,4 +1,4 @@
-/* global config csv2geojson turf Assembly $ */
+/* global config csv2geojson turf Assembly $ */t
 'use strict';
 
 mapboxgl.accessToken = config.accessToken;
