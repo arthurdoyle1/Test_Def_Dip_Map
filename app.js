@@ -508,35 +508,31 @@ map.on('load', () => {
           'circle-color': [
             'match',
             ['get', 'Diplomacy_category'],
-            'Arms control',
-            '#D9ED92',
-            'Cultural Diplomacy (Defence)',
-            '#3D2E5D',
-            'Defence Cooperation',
-            '#B5E48C',
-            'Defence Infrastructure',
-            '#99D98C',
-            'HADR – Disaster Response',
-            '#76C893',
-            'Maritime Security',
-            '#52B69A',
-            'Military Exercises',
-            '#34A0A4',
-            'Military Medical Diplomacy',
-            '#168AAD',
-            'MIL-POL Engagement',
-            '#1A759F',
-            'Sports Diplomacy (Defence)',
-            '#1E6091',
-            'Training',
-            '#184E77',
-            'Visit Diplomacy (Defence)',
-            '#ff8800',
-            '#ff8800'
+            'Visit Diplomacy', '#14746f',
+            'Military Medical Diplomacy', '#469d89',
+            'HADR – Disaster Response', '#f1dca7',
+            'Cultural Diplomacy (Defence)', '#c8d5b9',
+            'Sports Diplomacy (Defence)', '#faf3dd',
+            'Training', '#78c6a3',
+            'Defence Cooperation', '#48cae4',
+            'Military Exercises', '#00b4d8',
+            'MIL-POL Engagement', '#0096c7',
+            'Arms control', '#0077b6',
+            'Maritime Security', '#023e8a',
+            'Defence Infrastructure', '#03045e',
+            /* Add a default color if needed */
+            '#0077b6' // Example default color
           ],
           'circle-stroke-color': 'white',
           'circle-stroke-width': 1,
-          'circle-opacity': 0.7,
+          'circle-opacity': [
+            'match',
+            ['get', 'Colour'],
+            'Arms control', 0.8, // Example: Arms control category with 80% opacity
+            'Broad', 0.6, // Another category with 70% opacity
+            // ... other categories with their respective opacities
+            1 // Default opacity
+          ]
         },
       });
     },
