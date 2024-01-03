@@ -460,13 +460,15 @@ function sortByDistance(selectedPoint) {
 map.on('load', () => {
   map.addControl(geocoder, 'top-right');
 
-  // Add your slider event listener here
   document.getElementById('slider').addEventListener('input', function (event) {
     const year = parseInt(event.target.value);
     document.getElementById('active-year').innerText = year;
-    // Update the map filter here
-    // Example: map.setFilter('your_layer_id', ['==', ['number', ['get', 'Year']], year]);
+  
+    // Update the map filter for the 'locationData' layer
+    // Replace 'Year' with the actual property name in your dataset that represents the year
+    map.setFilter('locationData', ['==', ['number', ['get', 'Year']], year]);
   });
+  
 
 
   
@@ -475,6 +477,15 @@ map.on('load', () => {
   console.log('loaded');
   $(document).ready(() => {
     console.log('ready');
+  
+    // Add the slider event listener here
+    document.getElementById('slider').addEventListener('input', function (event) {
+      const year = parseInt(event.target.value);
+      document.getElementById('active-year').innerText = year;
+      // Update the map filter here
+      // Example: map.setFilter('your_layer_id', ['==', ['number', ['get', 'Year']], year]);
+    });
+  
     $.ajax({
       type: 'GET',
       url: config.CSV,
