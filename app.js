@@ -539,17 +539,6 @@ map.on('load', () => {
   }
 });
 
-map.addLayer({
-  // ... other layer options ...
-  filter: ['==', ['number', ['get', 'Year']], 2020]
-});
-
-document.getElementById('yearSlider').addEventListener('input', function(e) {
-  const year = parseInt(e.target.value, 10);
-  document.getElementById('active-year').textContent = year;
-
-  map.setFilter('Year', ['==', ['number', ['get', 'Year']], year]);
-});
 
 // Modal - popup for filtering results
 const filterResults = document.getElementById('filterResults');
