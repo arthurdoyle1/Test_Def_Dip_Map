@@ -94,5 +94,13 @@
 
   }
 
+  #yearSliderContainer {
+    margin: 10px 0;
+}
+
+.slider {
+    width: 100%;
+    margin: 5px 0;
+}
 
   

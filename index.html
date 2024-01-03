@@ -58,9 +58,17 @@
             </div>
         </div>
         <div class='flex-child flex-child--grow w-auto viewport-full-ml viewport-twothirds' id='map'>
-
         </div>
-
+        
+        <div class="flex-parent flex-parent--center-main">
+            <div id="yearSliderContainer">
+                <label for="yearSlider">Year Range: </label>
+                <input type="range" id="yearSlider" name="yearSlider" min="2000" max="2024" value="2012" class="slider">
+                <span id="yearSliderValue">2012</span>
+            </div>
+            <button id="removeFilters" class="btn">Reset Filters</button>
+        </div>
+        
         <div id='modal'
             class='absolute top right bottom left scroll-auto hide-visually flex-parent flex-parent--center-main mt120-ml'>
             <div class='pt36'>
