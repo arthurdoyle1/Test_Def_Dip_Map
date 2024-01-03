@@ -460,6 +460,17 @@ function sortByDistance(selectedPoint) {
 map.on('load', () => {
   map.addControl(geocoder, 'top-right');
 
+  // Add your slider event listener here
+  document.getElementById('slider').addEventListener('input', function (event) {
+    const year = parseInt(event.target.value);
+    document.getElementById('active-year').innerText = year;
+    // Update the map filter here
+    // Example: map.setFilter('your_layer_id', ['==', ['number', ['get', 'Year']], year]);
+  });
+
+
+  
+
   // csv2geojson - following the Sheet Mapper tutorial https://www.mapbox.com/impact-tools/sheet-mapper
   console.log('loaded');
   $(document).ready(() => {

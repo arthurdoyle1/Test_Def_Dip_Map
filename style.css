@@ -93,3 +93,12 @@
     display: block;
 
   }
+  .session {
+    margin-bottom: 20px;
+  }
+  
+  .row {
+    height: 12px;
+    width: 100%;
+  }
+  
