@@ -30,9 +30,11 @@
 </head>
 
 <body>
-    <h1>Motor vehicle collisions</h1>
-    <p>Data: <a href='https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions/h9gi-nx95'>Motor vehicle collision injuries and deaths</a> in NYC, Jan 2016</p>
-  </div>
+    <div class='session' id='sliderbar'>
+        <h2>Year: <label id='active-year'>2012</label></h2>
+        <input id='yearSlider' class='row' type='range' min='2000' max='2024' step='1' value='2012' />
+      </div>
+      
 <body>
     <div class='flex-parent viewport-full relative scroll-hidden'>
         <div class='flex-child w-full w360-ml absolute static-ml left bottom'>
