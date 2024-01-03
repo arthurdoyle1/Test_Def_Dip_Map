@@ -538,24 +538,6 @@ map.on('load', () => {
     buildLocationList(geojsonData);
   }
 });
-// Inside the script tag or in your app.js after the map loads
-document.getElementById('year-slider').addEventListener('input', function(e) {
-  const year = parseInt(e.target.value, 10);
-  document.getElementById('active-year').textContent = year;
-
-  // Ensure the map is loaded before applying the filter
-  if (map.isStyleLoaded()) {
-    // Update the map data filter
-    map.setFilter('locationData', ['==', ['get', 'Year'], year]);
-  }
-});
-
-// When the map is initially loaded
-map.on('load', function() {
-  // Set the initial filter to the first year of your slider (2018)
-  map.setFilter('locationData', ['==', ['get', 'Year'], 2018]);
-});
-
 
 // Modal - popup for filtering results
 const filterResults = document.getElementById('filterResults');
