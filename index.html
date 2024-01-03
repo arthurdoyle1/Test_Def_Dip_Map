@@ -2,27 +2,25 @@
 <html>
 
 <head>
+    <title></title>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Your Page Title</title>
-
-    <!-- Load CSS Files -->
     <link href='https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.min.css' rel='stylesheet'>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet'>
-    <link rel='stylesheet' href="style.css" />
-
-    <!-- Load JavaScript Libraries -->
     <script src='https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.js'></script>
-    <script src='https://unpkg.com/supercluster'></script>
+    <script src="https://unpkg.com/supercluster"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
-    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/geojson/0.5.0/geojson.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/npm/@turf/turf@5/turf.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <script
+        src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet'
+        href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css'
+        type='text/css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/geojson/0.5.0/geojson.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@5/turf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
     <script src='https://npmcdn.com/csv2geojson@latest/csv2geojson.js'></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
-
-    <!-- Custom Styles -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel='stylesheet' href="style.css" />
     <style>
         body { margin: 0; padding: 0; }
         #legend { position: absolute; top: 75px; right: 10px; background: rgba(255, 255, 255, 0.8); padding: 10px; border-radius: 5px; }
@@ -31,12 +29,10 @@
     </style>
 </head>
 
-<!-- Rest of your HTML content -->
-
-</html>
-
+<body>
 
 <body>
+
     <div class='flex-parent viewport-full relative scroll-hidden'>
         <div class='flex-child w-full w360-ml absolute static-ml left bottom'>
             <div class='flex-parent flex-parent--column viewport-third bg-white'>
@@ -55,7 +51,6 @@
                             </button>
                         </div>
 
-
                     </div>
                     <div id="listings" class="flex-child viewport-twothirds py12 px12 listings scroll-auto"></div>
 
@@ -63,12 +58,7 @@
             </div>
         </div>
         <div class='flex-child flex-child--grow w-auto viewport-full-ml viewport-twothirds' id='map'>
-<!-- Slider for Year -->
-<div class='session' id='sliderbar'>
-    <h2>Year: <label id='active-year'>2020</label></h2>
-    <input id='slider' class='row' type='range' min='2018' max='2024' step='1' value='2020' />
-  </div>
-  
+
         </div>
 
         <div id='modal'
@@ -92,6 +82,7 @@
                 </div>
             </div>
         </div>
+        
         <div id="legend">
             <div class="legend-item">
                 <div class="legend-color" style="background-color: #808080;"></div>
@@ -101,14 +92,25 @@
                 <div class="legend-color" style="background-color: #3D2E5D;"></div>
                 <div>
                     Identifies 'Specific Locations' </div>
-                </div>
             </div>
         </div>
-    </body>
+    </div>
     
-    <!-- Rest of your HTML content -->
-    
-    <script src="config.js"></script>
-    <script src="app.js"></script>
-    </html>
-    
+    </div>
+
+    </div>
+</div>
+</body>
+<div class='session' id='sliderbar'>
+    <h2>Year: 
+    <label id='active-year'>2018</label></h2>
+    <input id='slider' class='rounded' type='range' min='2018' max='2024' step='1' value='2018' />
+    <label for="show-all-years">Show All Years</label>
+    <input type="checkbox" id="show-all-years">
+<script>
+
+</script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+
+</html>
