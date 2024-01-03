@@ -457,38 +457,78 @@ function sortByDistance(selectedPoint) {
 }
 
 
-map.on('load', function() {
-  // Load GeoJSON from an external file
-  map.addSource('locationData', {
-      type: 'geojson',
-      data: './data.geojson' // Path to your GeoJSON file
+map.on('load', () => {
+  map.addControl(geocoder, 'top-right');
+
+  // Add your slider event listener here
+  document.getElementById('slider').addEventListener('input', function (event) {
+    const year = parseInt(event.target.value);
+    document.getElementById('active-year').innerText = year;
+    // Update the map filter here
+    // Example: map.setFilter('your_layer_id', ['==', ['number', ['get', 'Year']], year]);
   });
 
-  // Add a layer to the map using the source
-  map.addLayer({
-      id: 'locationData',
-      type: 'circle',
-      source: 'locationData',
-      paint: {
-          'circle-radius': 7,
-          'circle-color': [
+
+  
+
+  // csv2geojson - following the Sheet Mapper tutorial https://www.mapbox.com/impact-tools/sheet-mapper
+  console.log('loaded');
+  $(document).ready(() => {
+    console.log('ready');
+    $.ajax({
+      type: 'GET',
+      url: config.CSV,
+      dataType: 'text',
+      success: function (csvData) {
+        makeGeoJSON(csvData);
+      },
+      error: function (request, status, error) {
+        console.log(request);
+        console.log(status);
+        console.log(error);
+      },
+    });
+  });
+
+  function makeGeoJSON(csvData) {
+    csv2geojson.csv2geojson(
+      csvData,
+      {
+        latfield: 'Latitude',
+        lonfield: 'Longitude',
+        delimiter: ',',
+      },
+      (err, data) => {
+        data.features.forEach((data, i) => {
+          data.properties.id = i;
+        });
+
+        geojsonData = data;
+        // Add the the layer to the map
+        map.addLayer({
+          id: 'locationData',
+          type: 'circle',
+          source: {
+            type: 'geojson',
+            data: geojsonData,
+          },
+          paint: {
+            'circle-radius': 7, // size of circles
+            'circle-color': [
               'match',
               ['get', 'Colour'],
               'Broad', '#808080', // Color for Category1
               'Specific', '#3D2E5D', // Color for Category2
               '#808080' // Default color if no match
-          ],
-          'circle-stroke-color': 'white',
-          'circle-stroke-width': 1,
-          'circle-opacity': 0.7
-      }
-  });
+            ],
+            'circle-stroke-color': 'white',
+            'circle-stroke-width': 1,
+            'circle-opacity': 0.7,
+          },
+        });
       },
     );
-  document.getElementById('slider').addEventListener('input', function (event) {
-      const year = parseInt(event.target.value);
-      document.getElementById('active-year').innerText = year;
- 
+
     map.on('click', 'locationData', (e) => {
       const features = map.queryRenderedFeatures(e.point, {
         layers: ['locationData'],
@@ -508,7 +548,7 @@ map.on('load', function() {
     });
     buildLocationList(geojsonData);
   }
-);
+});
 
 
 // Modal - popup for filtering results
