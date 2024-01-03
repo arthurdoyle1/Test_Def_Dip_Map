@@ -271,17 +271,6 @@ function createFilterObject(filterSettings) {
 function applyFilters() {
   const filterForm = document.getElementById('filters');
 
-  const yearSlider = document.getElementById('yearSlider');
-  const selectedYear = parseInt(yearSlider.value);
-
-  // Filter logic
-  geojsonData.features.forEach((feature) => {
-      // Assuming you have a year property in your data
-      if (feature.properties.year === selectedYear) {
-          filteredGeojson.features.push(feature);
-      }
-  });
-
   filterForm.addEventListener('change', function () {
     const filterOptionHTML = this.getElementsByClassName('filter-option');
     const filterOption = [].slice.call(filterOptionHTML);
@@ -426,19 +415,6 @@ createFilterObject(config.filters);
 applyFilters();
 filters(config.filters);
 removeFiltersButton();
-
-function initializeYearSlider() {
-  const yearSlider = document.getElementById('yearSlider');
-  const yearSliderValue = document.getElementById('yearSliderValue');
-
-  yearSlider.oninput = function() {
-      yearSliderValue.innerHTML = this.value;
-      applyFilters(); // Update the map based on the slider value
-  }
-}
-
-initializeYearSlider();
-
 
 const geocoder = new MapboxGeocoder({
   accessToken: mapboxgl.accessToken, // Set the access token
