@@ -16,6 +16,12 @@ const config = {
   filters: [
     {
       type: 'dropdown',
+      title: 'Year: ',
+      columnHeader: 'Year', // This should match the exact name of the column in your CSV
+      listItems: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'], // List years as strings if they are stored as text in your CSV
+    },
+    {
+      type: 'dropdown',
       title: 'Delivering Countries: ',
       columnHeader: 'Delivering_Country',
       listItems: [
@@ -30,7 +36,7 @@ const config = {
         'New Zealand',
         'Papua New Guinea',
         'United Kingdom',
-        'United States of America',      
+        'United States of America',
       ],
     },
     {
