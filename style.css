@@ -127,7 +127,8 @@
 @media only screen and (max-width: 600px) {
     #sliderbar {
        position: fixed;
-        bottom: 312px; /* Position at the top with a 20px margin */
+        top: 20px; /* Position at the top with a 20px margin */
+        bottom: auto; /* Disable positioning at the bottom */
     }
 }
 
@@ -226,7 +227,7 @@ label[for="show-all-years"] {
     margin: 50px auto;
     position: fixed;
     left: 50%;
-    top: 30%;
+    top: 50%;
     transform: translate(-50%, -50%);
     z-index: 1001;
 }
