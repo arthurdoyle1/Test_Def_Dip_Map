@@ -241,3 +241,13 @@ label[for="show-all-years"] {
 .hidden {
     display: none;
 }
+.legend-toggle {
+    display: none; /* Hidden by default */
+    /* Additional styling */
+}
+
+@media screen and (max-width: 768px) { /* Adjust the max-width as needed */
+    .legend-toggle {
+        display: block; /* Show only on smaller screens */
+    }
+}

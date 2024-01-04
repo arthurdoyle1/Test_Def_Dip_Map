@@ -611,3 +611,4 @@ document.getElementById('helpButton').addEventListener('click', function() {
 document.getElementById('closeHelp').addEventListener('click', function() {
   document.getElementById('helpManual').style.display = 'none';
 });
+

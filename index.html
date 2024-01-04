@@ -25,6 +25,11 @@
         #legend { position: absolute; top: 75px; right: 10px; background: rgba(255, 255, 255, 0.8); padding: 10px; border-radius: 5px; }
         .legend-item { margin-bottom: 8px; }
         .legend-color { width: 20px; height: 20px; display: inline-block; margin-right: 5px; }
+        @media screen and (min-width: 601px) {
+            #legend {
+                display: block; /* Show the legend on larger screens */
+            }
+        } 
     </style>
 </head>
 
