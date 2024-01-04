@@ -2,12 +2,9 @@
 
 // eslint-disable-next-line no-unused-vars
 const config = {
-  style: 'mapbox://styles/mapbox/light-v10',
   accessToken:
     'pk.eyJ1IjoiYXJ0ZG95MyIsImEiOiJjbG96bnN4dGEwMmNnMmltajcybzBqYTRrIn0.ZbzBgIBqibfEWXo9j0mUgw',
   CSV: './Sample_Data.csv',
-  center: [ 170.4068, -14.9244],
-  zoom: 5.5,
   title: 'Defence Diplomacy Interactive Map Tracker',
   description:
     'The Defence Diplomacy Interactive Map Tracker is a beta version web tool designed to provide a dynamic and interactive map experience for tracking defense diplomacy activities in the Pacific.',

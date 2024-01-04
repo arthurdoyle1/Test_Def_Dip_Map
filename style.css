@@ -166,3 +166,56 @@ label[for="show-all-years"] {
     display: flex;
     align-items: center;
 }
+.help-button {
+    font-size: 12px;
+    color: white;
+    background-color: #448EE4; /* Blue background, similar to #filterResults */
+    border: none;
+    padding: 6px 12px; /* Adjust padding as needed */
+    border-radius: 4px; /* Rounded corners, similar to #filterResults */
+    cursor: pointer;
+    position: fixed; /* Fixed position, similar to #filterResults */
+    bottom: 20px; /* Position from the bottom */
+    left: 20px; /* Position from the right */
+    z-index: 10; /* Ensure it's visible above other elements */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.help-button:hover {
+    background-color: #3569A2; /* Darker blue on hover */
+}
+
+.help-manual {
+    display: none; /* Keep hidden until activated */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    z-index: 100; /* Above other elements but below the help button */
+    width: 80%; /* Responsive width */
+    max-width: 400px; /* Maximum width */
+}
+
+.close-help {
+    font-size: 12px;
+    color: white;
+    background-color: #448EE4;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-help:hover {
+    background-color: #3569A2;
+}
+
+/* Add this class to hide elements */
+.hidden {
+    display: none;
+}

@@ -12,16 +12,19 @@ const filteredGeojson = {
 
 const map = new mapboxgl.Map({
   container: 'map',
-  style: config.style,
-  center: config.center,
-  zoom: config.zoom,
+  style: 'mapbox://styles/mapbox/bright-v8',
+    center: [ 179.414413, -16.578193],
+    zoom: 4.2,
+    pitch: 50, // pitch in degrees
+    bearing: 0, // bearing in degrees
+  
   transformRequest: transformRequest,
 });
 
 function flyToLocation(currentFeature) {
   map.flyTo({
     center: currentFeature,
-    zoom: 14,
+    zoom: 11.5,
   });
 }
 
@@ -457,6 +460,7 @@ function sortByDistance(selectedPoint) {
 }
 
 
+
 map.on('load', () => {
   map.addControl(geocoder, 'top-right');
 
@@ -508,18 +512,18 @@ map.on('load', () => {
           'circle-color': [
             'match',
             ['get', 'Diplomacy_category'],
-            'Visit Diplomacy', '#14746f',
-            'Military Medical Diplomacy', '#469d89',
-            'HADR – Disaster Response', '#f1dca7',
-            'Cultural Diplomacy (Defence)', '#c8d5b9',
-            'Sports Diplomacy (Defence)', '#faf3dd',
-            'Training', '#78c6a3',
-            'Defence Cooperation', '#48cae4',
-            'Military Exercises', '#00b4d8',
-            'MIL-POL Engagement', '#0096c7',
-            'Arms control', '#0077b6',
-            'Maritime Security', '#023e8a',
-            'Defence Infrastructure', '#03045e',
+            'Visit Diplomacy (Defence)', '#05668d',
+            'Military Medical Diplomacy', '#028090',
+            'Training', '#00a896',
+            'Cultural Diplomacy (Defence)', '#57cc99',
+            'Sports Diplomacy (Defence)', '#fe7f2d',
+            'HADR – Disaster Response', '#fcca46',
+            'Defence Cooperation', '#cbf3f0',
+            'Military Exercises', '#4cc9f0',
+            'MIL-POL Engagement', '#4361ee',
+            'Arms Control', '#3a0ca3',
+            'Maritime Security', '#7209b7',
+            'Defence Infrastructure', '#f72585',
             /* Add a default color if needed */
             '#0077b6' // Example default color
           ],
@@ -598,4 +602,12 @@ document.getElementById('show-all-years').addEventListener('change', (event) => 
   const showAllYears = event.target.checked;
   document.getElementById('active-year').innerText = showAllYears ? 'All Years' : year;
   map.setFilter('locationData', showAllYears ? null : ['==', ['number', ['get', 'Year']], year]);
+});
+
+document.getElementById('helpButton').addEventListener('click', function() {
+  document.getElementById('helpManual').style.display = 'block';
+});
+
+document.getElementById('closeHelp').addEventListener('click', function() {
+  document.getElementById('helpManual').style.display = 'none';
 });

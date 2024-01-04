@@ -8,13 +8,12 @@
     <link href='https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.min.css' rel='stylesheet'>
     <script src='https://api.mapbox.com/mapbox-assembly/v0.24.0/assembly.js'></script>
     <script src="https://unpkg.com/supercluster"></script>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
-    <script
-        src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
     <link rel='stylesheet'
-        href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css'
-        type='text/css' />
+    href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css'
+    type='text/css' />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/geojson/0.5.0/geojson.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@turf/turf@5/turf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
@@ -58,9 +57,10 @@
             </div>
         </div>
         <div class='flex-child flex-child--grow w-auto viewport-full-ml viewport-twothirds' id='map'>
-
         </div>
 
+
+        
         <div id='modal'
             class='absolute top right bottom left scroll-auto hide-visually flex-parent flex-parent--center-main mt120-ml'>
             <div class='pt36'>
@@ -90,25 +90,36 @@
     </div>
     <div id="legend" class="legend">
         <h3>Legend</h3>
-        <div class="category"><span class="color-box" style="background-color: #14746f;"></span>Visit Diplomacy (Defence)</div>
-        <div class="category"><span class="color-box" style="background-color: #469d89;"></span>Military Medical Diplomacy</div>
-        <div class="category"><span class="color-box" style="background-color: #78c6a3;"></span>Training</div>
-        <div class="category"><span class="color-box" style="background-color: #c8d5b9;"></span>Cultural Diplomacy (Defence)</div>
-        <div class="category"><span class="color-box" style="background-color: #faf3dd;"></span>Sports Diplomacy (Defence)</div>
-        <div class="category"><span class="color-box" style="background-color: #f1dca7;"></span>HADR – Disaster Response</div>
-        <div class="category"><span class="color-box" style="background-color: #48cae4;"></span>Defence Cooperation</div>
-        <div class="category"><span class="color-box" style="background-color: #00b4d8;"></span>Military Exercises</div>
-        <div class="category"><span class="color-box" style="background-color: #0096c7;"></span>MIL-POL Engagement</div>
-        <div class="category"><span class="color-box" style="background-color: #0077b6;"></span>Arms Control</div>
-        <div class="category"><span class="color-box" style="background-color: #023e8a;"></span>Maritime Security</div>
-        <div class="category"><span class="color-box" style="background-color: #03045e;"></span>Defence Infrastructure</div>
+        <div class="category"><span class="color-box" style="background-color: #05668d;"></span>Visit Diplomacy (Defence)</div>
+        <div class="category"><span class="color-box" style="background-color: #028090;"></span>Military Medical Diplomacy</div>
+        <div class="category"><span class="color-box" style="background-color: #00a896;"></span>Training</div>
+        <div class="category"><span class="color-box" style="background-color: #57cc99;"></span>Cultural Diplomacy (Defence)</div>
+        <div class="category"><span class="color-box" style="background-color: #fe7f2d;"></span>Sports Diplomacy (Defence)</div>
+        <div class="category"><span class="color-box" style="background-color: #fcca46;"></span>HADR – Disaster Response</div>
+        <div class="category"><span class="color-box" style="background-color: #cbf3f0;"></span>Defence Cooperation</div>
+        <div class="category"><span class="color-box" style="background-color: #4cc9f0;"></span>Military Exercises</div>
+        <div class="category"><span class="color-box" style="background-color: #4361ee;"></span>MIL-POL Engagement</div>
+        <div class="category"><span class="color-box" style="background-color: #3a0ca3;"></span>Arms Control</div>
+        <div class="category"><span class="color-box" style="background-color: #7209b7;"></span>Maritime Security</div>
+        <div class="category"><span class="color-box" style="background-color: #f72585;"></span>Defence Infrastructure</div>
         
 
     
     </div>
-    
-    
     </div>
+
+    <button id="helpButton" class="help-button">Help</button>
+
+    <div id="helpManual" class="help-manual" style="display: none;">
+        <h2>Help Manual</h2>
+        <p>Right Mouse Button: Use your right mouse button to change the pitch/yaw on the map.</p>
+        <p>Filter Button: Changes what markers are displayed. You can reset the display with the "Clear Filter" button.</p>
+        <p>Click Entries: Clicking on the entries in the left sidebar will take you to the corresponding marker on the map.</p>
+        <button id="closeHelp" class="close-help">Close</button>
+ 
+</div>
+
+    
 </div>
 </body>
 
