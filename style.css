@@ -9,6 +9,10 @@
 
 }
 
+#filterResults:hover {
+    background-color: #3569A2; /* Darker blue on hover */
+}
+
 .theme{
     background-color: #2A395F;
 }
@@ -41,6 +45,11 @@
     font-weight: 800;
     margin-top: 5px;
     text-decoration: none;
+}
+
+/* Target the titles within the listings */
+#listings .item .title:hover {
+    color: #3569A2; /* Change color on hover */
 }
 
 
@@ -167,11 +176,11 @@ label[for="show-all-years"] {
     align-items: center;
 }
 .help-button {
-    font-size: 12px;
+    font-size: 16px;
     color: white;
     background-color: #448EE4; /* Blue background, similar to #filterResults */
     border: none;
-    padding: 6px 12px; /* Adjust padding as needed */
+    padding: 10px 12px; /* Adjust padding as needed */
     border-radius: 4px; /* Rounded corners, similar to #filterResults */
     cursor: pointer;
     position: fixed; /* Fixed position, similar to #filterResults */
@@ -186,33 +195,46 @@ label[for="show-all-years"] {
 }
 
 .help-manual {
-    display: none; /* Keep hidden until activated */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-    z-index: 100; /* Above other elements but below the help button */
-    width: 80%; /* Responsive width */
-    max-width: 400px; /* Maximum width */
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
 }
 
+
+.help-manual h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.help-manual p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
 .close-help {
-    font-size: 12px;
+    background-color: #f44336; /* Red background color for close button */
     color: white;
-    background-color: #448EE4;
+    padding: 10px 20px;
     border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
+    float: right; /* Align the button to the right */
 }
 
 .close-help:hover {
-    background-color: #3569A2;
+    background-color: #d32f2f; /* Darker shade of red on hover */
 }
 
 /* Add this class to hide elements */
