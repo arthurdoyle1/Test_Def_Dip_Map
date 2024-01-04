@@ -175,15 +175,6 @@ label[for="show-all-years"] {
 }
 
 
-
-/* Correct media query at the root level */
-@media only screen and (max-width: 500px) {
-    .legend {
-        display: none;
-    }
-}
-
-
 .color-box {
     width: 20px;
     height: 20px;

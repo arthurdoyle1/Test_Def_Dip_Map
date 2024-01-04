@@ -25,8 +25,8 @@
 body { margin: 0; padding: 0; }
 #legend, #legendManual {
     position: fixed;
-    top: 30%; /* Center the popup vertically */
-    left: 50%; /* Center the popup horizontally */
+    top: 20%; /* Center the popup vertically */
+    right: -3%; /* Center the popup horizontally */
     transform: translate(-50%, -50%); /* Center the popup both vertically and horizontally */
     background: rgba(255, 255, 255, 0.9); /* Adjust transparency */
     padding: 10px;
@@ -35,9 +35,14 @@ body { margin: 0; padding: 0; }
     z-index: 1000;
     font-size: 0.9em;
     max-width: 250px;
-    display: none; /* Hide the popup by default */
+    display: true; /* Hide the popup by default */
 }
-
+/* Media query for screens with a maximum width of 600 pixels */
+@media only screen and (max-width: 600px) {
+    #legend, #legendManual {
+        display: none; /* Hide the legend and manual on small devices */
+    }
+}
 /* ... (rest of your existing CSS) ... */
 
 /* Hide the legend button by default */
@@ -143,7 +148,7 @@ body { margin: 0; padding: 0; }
     
     </div>
     <div id="legend" class="legend">
-        <h3>Legend</h3>
+        <h3></h3>
         <div class="category"><span class="color-box" style="background-color: #05668d;"></span>Visit Diplomacy (Defence)</div>
         <div class="category"><span class="color-box" style="background-color: #028090;"></span>Military Medical Diplomacy</div>
         <div class="category"><span class="color-box" style="background-color: #00a896;"></span>Training</div>
