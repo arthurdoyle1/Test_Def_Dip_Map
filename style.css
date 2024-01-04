@@ -83,6 +83,7 @@
 }
 
 .mapboxgl-popup-content {
+    background-color: rgba(255, 255, 255, 0.5); /* White background with 50% transparency */
     font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
     text-align: center;
     padding: 5px; /* Corrected to include 'px' */
@@ -161,6 +162,14 @@ label[for="show-all-years"] {
     margin-top: 0;
     font-size: 1em;
 }
+
+/* Correct media query at the root level */
+@media only screen and (max-width: 500px) {
+    .legend {
+        display: none;
+    }
+}
+
 
 .color-box {
     width: 20px;
@@ -241,13 +250,66 @@ label[for="show-all-years"] {
 .hidden {
     display: none;
 }
-.legend-toggle {
-    display: none; /* Hidden by default */
-    /* Additional styling */
+
+
+.legend-button {
+    font-size: 16px;
+    color: white;
+    background-color: #448EE4; /* Blue background, similar to #filterResults */
+    border: none;
+    padding: 10px 12px; /* Adjust padding as needed */
+    border-radius: 4px; /* Rounded corners, similar to #filterResults */
+    cursor: pointer;
+    position: fixed; /* Fixed position, similar to #filterResults */
+    bottom: 20px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    z-index: 10; /* Ensure it's visible above other elements */
+    transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
-@media screen and (max-width: 768px) { /* Adjust the max-width as needed */
-    .legend-toggle {
-        display: block; /* Show only on smaller screens */
-    }
+.legend-button:hover {
+    background-color: #3569A2; /* Darker blue on hover */
+}
+
+.legend-manual {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+}
+
+
+.legend-manual h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.legend-manual p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.close-legend {
+    background-color: #f44336; /* Red background color for close button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    float: right; /* Align the button to the right */
+}
+
+.close-legend:hover {
+    background-color: #d32f2f; /* Darker shade of red on hover */
 }

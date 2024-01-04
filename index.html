@@ -21,16 +21,66 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel='stylesheet' href="style.css" />
     <style>
-        body { margin: 0; padding: 0; }
-        #legend { position: absolute; top: 75px; right: 10px; background: rgba(255, 255, 255, 0.8); padding: 10px; border-radius: 5px; }
-        .legend-item { margin-bottom: 8px; }
-        .legend-color { width: 20px; height: 20px; display: inline-block; margin-right: 5px; }
-        @media screen and (min-width: 601px) {
-            #legend {
-                display: block; /* Show the legend on larger screens */
-            }
-        } 
+        /* Existing CSS */
+body { margin: 0; padding: 0; }
+#legend, #legendManual {
+    position: absolute;
+    top: calc(50% - 200px); /* Center vertically and move 200px up */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact center */
+    background: rgba(255, 255, 255, 0.6); /* Adjust transparency */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 0.9em;
+    max-width: 250px;
+}
+
+
+/* ... (rest of your existing CSS) ... */
+
+/* Hide the legend button by default */
+.legend-button {
+    display: none;
+    /* ... (other existing styles for the legend button) ... */
+    font-size: 16px;
+    color: white;
+    background-color: #448EE4;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+/* CSS media query for screens with a maximum width of 600 pixels */
+@media only screen and (max-width: 600px) {
+    .legend-button {
+        display: block;
+        /* ... (other existing styles for the legend button) ... */
+        font-size: 16px;
+        color: white;
+        background-color: #448EE4;
+        border: none;
+        padding: 10px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10;
+        transition: background-color 0.3s;
+    }
+}
+
+/* ... (rest of your existing CSS, if any) ... */
     </style>
+    
 </head>
 
 <body>
@@ -107,11 +157,9 @@
         <div class="category"><span class="color-box" style="background-color: #3a0ca3;"></span>Arms Control</div>
         <div class="category"><span class="color-box" style="background-color: #7209b7;"></span>Maritime Security</div>
         <div class="category"><span class="color-box" style="background-color: #f72585;"></span>Defence Infrastructure</div>
-        
+    </div>
+    </div>
 
-    
-    </div>
-    </div>
 
     <button id="helpButton" class="help-button">Help</button>
 
@@ -124,7 +172,27 @@
         <p><strong>Map Navigation:</strong> Use the zoom controls to zoom in or out. Drag the map to pan around.</p>
         <button id="closeHelp" class="close-help">Close</button>
     </div>
-    
+
+    <button id="legendButton" class="legend-button">Legend</button>
+
+    <div id="legendManual" class="legend-manual" style="display: none;">
+        <div id="legend2" class="legend2">
+            <h3>Legend</h3>
+            <div class="category"><span class="color-box" style="background-color: #05668d;"></span>Visit Diplomacy (Defence)</div>
+            <div class="category"><span class="color-box" style="background-color: #028090;"></span>Military Medical Diplomacy</div>
+            <div class="category"><span class="color-box" style="background-color: #00a896;"></span>Training</div>
+            <div class="category"><span class="color-box" style="background-color: #57cc99;"></span>Cultural Diplomacy (Defence)</div>
+            <div class="category"><span class="color-box" style="background-color: #fe7f2d;"></span>Sports Diplomacy (Defence)</div>
+            <div class="category"><span class="color-box" style="background-color: #fcca46;"></span>HADR – Disaster Response</div>
+            <div class="category"><span class="color-box" style="background-color: #cbf3f0;"></span>Defence Cooperation</div>
+            <div class="category"><span class="color-box" style="background-color: #4cc9f0;"></span>Military Exercises</div>
+            <div class="category"><span class="color-box" style="background-color: #4361ee;"></span>MIL-POL Engagement</div>
+            <div class="category"><span class="color-box" style="background-color: #3a0ca3;"></span>Arms Control</div>
+            <div class="category"><span class="color-box" style="background-color: #7209b7;"></span>Maritime Security</div>
+            <div class="category"><span class="color-box" style="background-color: #f72585;"></span>Defence Infrastructure</div>
+            <button id="closeLegend" class="close-legend">Close</button>
+        </div>
+    </div>
 
     
 </div>
