@@ -105,22 +105,32 @@
   }
 
 /* Style the new position of the slider bar */
+/* Existing CSS for the slider bar */
 #sliderbar {
     position: fixed;
-    bottom: 20px; /* Adjust the desired distance from the bottom */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
-    border-radius: 15px; /* Adjust the border radius for rounded corners */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%; /* Adjust the desired width */
-    max-width: 400px; /* Set a maximum width if needed */
-    z-index: 999; /* Ensure it appears above other content */
+    width: 80%;
+    max-width: 400px;
+    z-index: 999;
 }
+
+/* Responsive CSS for mobile devices */
+@media only screen and (max-width: 600px) {
+    #sliderbar {
+        top: 20px; /* Position at the top with a 20px margin */
+        bottom: auto; /* Disable positioning at the bottom */
+    }
+}
+
 
 /* Style the slider input */
 #slider {
@@ -162,6 +172,8 @@ label[for="show-all-years"] {
     margin-top: 0;
     font-size: 1em;
 }
+
+
 
 /* Correct media query at the root level */
 @media only screen and (max-width: 500px) {

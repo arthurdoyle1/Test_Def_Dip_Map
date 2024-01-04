@@ -24,20 +24,17 @@
         /* Existing CSS */
 body { margin: 0; padding: 0; }
 #legend, #legendManual {
-    position: absolute;
-    top: calc(50% - 200px); /* Center vertically and move 200px up */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for exact center */
-    background: rgba(255, 255, 255, 0.6); /* Adjust transparency */
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    font-size: 0.9em;
-    max-width: 250px;
-}
-
-
+            position: absolute;
+            top: 100px; /* Adjust this value to move the legend higher or lower */
+            right: 10px;
+            background: rgba(255, 255, 255, 0.6); /* Adjust transparency */
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            font-size: 0.9em;
+            max-width: 250px;
+        }
 /* ... (rest of your existing CSS) ... */
 
 /* Hide the legend button by default */

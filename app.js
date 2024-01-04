@@ -462,7 +462,6 @@ function sortByDistance(selectedPoint) {
 
 
 map.on('load', () => {
-  map.addControl(geocoder, 'top-right');
 
   // csv2geojson - following the Sheet Mapper tutorial https://www.mapbox.com/impact-tools/sheet-mapper
   console.log('loaded');
