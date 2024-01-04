@@ -41,10 +41,10 @@
 .listings .item .title {
     display: inline-block;
     width: 100%;
-    color: #2A395F;
+    color: #023e8a;
     font-weight: 800;
     margin-top: 5px;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* Target the titles within the listings */
