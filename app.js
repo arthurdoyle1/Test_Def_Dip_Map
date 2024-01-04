@@ -628,3 +628,4 @@ document.getElementById('legendButton').addEventListener('click', function() {
 document.getElementById('closeLegend').addEventListener('click', function() {
   document.getElementById('legendManual').style.display = 'none';
 });
+

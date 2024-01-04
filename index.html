@@ -45,24 +45,6 @@ body { margin: 0; padding: 0; }
 }
 /* ... (rest of your existing CSS) ... */
 
-/* Hide the legend button by default */
-.legend-button {
-    display: none;
-    /* ... (other existing styles for the legend button) ... */
-    font-size: 16px;
-    color: white;
-    background-color: #448EE4;
-    border: none;
-    padding: 10px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 10;
-    transition: background-color 0.3s;
-}
-
 /* CSS media query for screens with a maximum width of 600 pixels */
 @media only screen and (max-width: 600px) {
     .legend-button {
@@ -76,7 +58,26 @@ body { margin: 0; padding: 0; }
         border-radius: 4px;
         cursor: pointer;
         position: fixed;
-        bottom: 20px;
+        bottom: 100px;
+        right: 20px;
+        z-index: 10;
+        transition: background-color 0.3s;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .filter2-button {
+        display: block;
+        /* ... (other existing styles for the legend button) ... */
+        font-size: 16px;
+        color: white;
+        background-color: #448EE4;
+        border: none;
+        padding: 10px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        position: fixed;
+        bottom: 150px;
         right: 20px;
         z-index: 10;
         transition: background-color 0.3s;
@@ -106,7 +107,7 @@ body { margin: 0; padding: 0; }
                             <button id='filterResults' class='txt-bold btn btn--stroke mr0-ml mr12 px18-ml px6'>
                                 <svg class='icon inline-block align-middle h24 w24'>
                                     <use xlink:href='#icon-filter' /></svg>
-                                <p class="inline-block-ml align-middle remove none">Show Filters</p>
+                                    <p class="inline-block-ml align-middle remove" style="display: inline-block !important;">Show Filters</p>
                             </button>
                         </div>
 

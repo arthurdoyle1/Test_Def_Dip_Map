@@ -197,8 +197,8 @@ label[for="show-all-years"] {
     border-radius: 4px; /* Rounded corners, similar to #filterResults */
     cursor: pointer;
     position: fixed; /* Fixed position, similar to #filterResults */
-    bottom: 20px; /* Position from the bottom */
-    left: 20px; /* Position from the right */
+    bottom: 50px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
     z-index: 10; /* Ensure it's visible above other elements */
     transition: background-color 0.3s; /* Smooth transition for background color */
 }
@@ -265,12 +265,26 @@ label[for="show-all-years"] {
     border-radius: 4px; /* Rounded corners, similar to #filterResults */
     cursor: pointer;
     position: fixed; /* Fixed position, similar to #filterResults */
-    bottom: 20px; /* Position from the bottom */
-    right: 20px; /* Position from the right */
+    bottom: px; /* Position from the bottom */
+    right: px; /* Position from the right */
     z-index: 10; /* Ensure it's visible above other elements */
     transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
+.legend-button {
+    font-size: 16px;
+    color: white;
+    background-color: #448EE4; /* Blue background, similar to #filterResults */
+    border: none;
+    padding: 10px 12px; /* Adjust padding as needed */
+    border-radius: 4px; /* Rounded corners, similar to #filterResults */
+    cursor: pointer;
+    position: fixed; /* Fixed position, similar to #filterResults */
+    bottom: px; /* Position from the bottom */
+    right: px; /* Position from the right */
+    z-index: 10; /* Ensure it's visible above other elements */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
 .legend-button:hover {
     background-color: #3569A2; /* Darker blue on hover */
 }
@@ -328,3 +342,4 @@ label[for="show-all-years"] {
 .apply-button {
     margin-left: 10px; /* Adjust the space as needed */
 }
+
