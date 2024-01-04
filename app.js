@@ -574,7 +574,7 @@ map.on('load', () => {
 
 // Modal - popup for filtering results
 const filterResults = document.getElementById('filterResults');
-const exitButton = document.getElementById('exitButton');
+const exitButton = document.getElementById('removeFilters2');
 const modal = document.getElementById('modal');
 
 filterResults.addEventListener('click', () => {

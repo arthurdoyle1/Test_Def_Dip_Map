@@ -326,3 +326,14 @@ label[for="show-all-years"] {
 .close-legend:hover {
     background-color: #d32f2f; /* Darker shade of red on hover */
 }
+
+.filter-button {
+    margin-right: 10px; /* Adjust the space as needed */
+}
+.reset-button {
+    margin-right: 10px; /* Adjust the space as needed */
+}
+
+.apply-button {
+    margin-left: 10px; /* Adjust the space as needed */
+}
