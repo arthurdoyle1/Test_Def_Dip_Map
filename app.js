@@ -30,8 +30,7 @@ function flyToLocation(currentFeature) {
 
 function createPopup(currentFeature) {
   const popups = document.getElementsByClassName('mapboxgl-popup');
-  /** Check if there is already a popup on the map and if so, remove it */
-  if (popups[0]) popups[0].remove();
+  if (popups[0] && popups[0] !== activePopup) popups[0].remove();
 
   const popupContent = document.createElement('div');
 
@@ -551,16 +550,38 @@ map.on('load', () => {
     },
   );
 
-    map.on('click', 'locationData', (e) => {
-      const features = map.queryRenderedFeatures(e.point, {
-        layers: ['locationData'],
-      });
-      const clickedPoint = features[0].geometry.coordinates;
-      flyToLocation(clickedPoint);
-      sortByDistance(clickedPoint);
-      createPopup(features[0]);
-    });
+  let activePopup = null;
 
+  map.on('click', () => {
+    activePopup = null;
+  });
+  
+
+  map.on('click', 'locationData', (e) => {
+    const features = map.queryRenderedFeatures(e.point, { layers: ['locationData'] });
+    if (!features.length) return;
+    const clickedFeature = features[0];
+    createPopup(clickedFeature);
+    activePopup = document.getElementsByClassName('mapboxgl-popup')[0];
+  });
+  
+
+    map.on('mouseenter', 'locationData', (e) => {
+      const features = map.queryRenderedFeatures(e.point, { layers: ['locationData'] });
+      if (!features.length) return;
+      const hoveredFeature = features[0];
+      createPopup(hoveredFeature);
+    });
+    
+   
+    map.on('mouseleave', 'locationData', () => {
+      if (!activePopup) {
+        const popups = document.getElementsByClassName('mapboxgl-popup');
+        if (popups[0]) popups[0].remove();
+      }
+    });
+    
+ 
     map.on('mouseenter', 'locationData', () => {
       map.getCanvas().style.cursor = 'pointer';
     });
