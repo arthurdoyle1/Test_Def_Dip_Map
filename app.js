@@ -69,7 +69,21 @@ const finalDescription = currentFeature.properties['Source']; // Replace 'finalD
 const finalDescriptionLink = currentFeature.properties['Source']; // Replace 'finalDescriptionLink' with the actual property name
 
 if (finalDescriptionLink !== undefined && finalDescriptionLink !== null) {
-  finalDescriptionBox.innerHTML = '<p><strong>Source</strong> <a href="' + finalDescription + '" target="_blank" style="text-decoration: underline; color: blue;">' + (finalDescription || '') + '</a></p>';
+  // Create a button instead of a hyperlink
+  const sourceButton = document.createElement('button');
+  sourceButton.innerText = 'Source';
+  sourceButton.onclick = function() {
+    window.open(finalDescriptionLink, '_blank');
+  };
+  sourceButton.style.textDecoration = 'underline';
+  sourceButton.style.color = 'blue';
+  sourceButton.style.backgroundColor = 'transparent';
+  sourceButton.style.border = 'none';
+  sourceButton.style.cursor = 'pointer';
+  sourceButton.style.padding = '0';
+  sourceButton.style.margin = '0';
+
+  finalDescriptionBox.appendChild(sourceButton);
   finalDescriptionBox.style.borderBottom = '1px solid #ccc'; // Adding a bottom border
   finalDescriptionBox.style.paddingBottom = '10px'; // Adding padding
   popupContent.appendChild(finalDescriptionBox);
@@ -87,6 +101,10 @@ new mapboxgl.Popup({ closeOnClick: true })
   .addTo(map);
 
 }
+
+
+
+
 
 function buildLocationList(locationData) {
   /* Add a new listing section to the sidebar. */
@@ -291,7 +309,13 @@ function applyFilters() {
             if (value.includes(filter.value)) {
               const geojFilter = [objs.header, filter.value];
               geojCheckboxFilters.push(geojFilter);
-            }
+              if (filter.id === 'Broad' && !filter.checked) {
+                // Filter out data with 'Broad' category when the checkbox is unchecked
+                filteredGeojson.features = filteredGeojson.features.filter(feature => 
+                  feature.properties.Colour !== 'Broad'
+                );
+              }}
+          
           });
         });
       }
@@ -418,16 +442,6 @@ applyFilters();
 filters(config.filters);
 removeFiltersButton();
 
-
-
-
-
-
-
-
-
-
-
 const geocoder = new MapboxGeocoder({
   accessToken: mapboxgl.accessToken, // Set the access token
   mapboxgl: mapboxgl, // Set the mapbox-gl instance
@@ -469,9 +483,36 @@ function sortByDistance(selectedPoint) {
 }
 
 
+const iconMapping = {
+  'Visit Diplomacy (Defence)': 'Icons/VISIT.PNG',
+  'Military Medical Diplomacy': 'Icons/MILITARYMEDICAL.PNG',
+  'Training': 'Icons/TRAINING.PNG',
+  'Cultural Diplomacy (Defence)': 'Icons/CULTURAL.png',
+  'Sports Diplomacy (Defence)': 'Icons/SPORTS.PNG',
+  'HADR – Disaster Response': 'Icons/HUMANITARIAN.PNG',
+  'Defence Cooperation': 'Icons/DEFENCECOOP.PNG',
+  'Military Exercises': 'Icons/MILITARY.PNG',
+  'MIL-POL Engagement': 'Icons/MILPOL.PNG',
+  'Arms control': 'Icons/ARMS.png',
+  'Public Diplomacy': 'Icons/PUBLIC.png',
+  'Maritime Security': 'Icons/MARITIME.png',
+  'Defence Infrastructure': 'Icons/DEFENCEINFRASTRUCTURE.PNG'
+  
+  
 
-map.on('load', () => {
+};
 
+function loadIcons() {
+  Object.keys(iconMapping).forEach(function(category) {
+    map.loadImage(iconMapping[category], function(error, image) {
+      if (error) throw error;
+      map.addImage(category, image);
+    });
+  });
+} 
+
+map.on('load', function() {
+  loadIcons();
   // csv2geojson - following the Sheet Mapper tutorial https://www.mapbox.com/impact-tools/sheet-mapper
   console.log('loaded');
   $(document).ready(() => {
@@ -490,7 +531,8 @@ map.on('load', () => {
       },
     });
   });
-
+  
+  
   function makeGeoJSON(csvData) {
   csv2geojson.csv2geojson(
     csvData,
@@ -510,45 +552,34 @@ map.on('load', () => {
       // Add the layer to the map
       map.addLayer({
         id: 'locationData',
-        type: 'circle',
+        type: 'symbol',
         source: {
           type: 'geojson',
-          data: geojsonData,
+          data: geojsonData
         },
-        paint: {
-          'circle-radius': 7,
-          'circle-color': [
-            'match',
-            ['get', 'Diplomacy_category'],
-            'Visit Diplomacy (Defence)', '#05668d',
-            'Military Medical Diplomacy', '#028090',
-            'Training', '#00a896',
-            'Cultural Diplomacy (Defence)', '#57cc99',
-            'Sports Diplomacy (Defence)', '#fe7f2d',
-            'HADR – Disaster Response', '#fcca46',
-            'Defence Cooperation', '#cbf3f0',
-            'Military Exercises', '#4cc9f0',
-            'MIL-POL Engagement', '#4361ee',
-            'Arms Control', '#3a0ca3',
-            'Maritime Security', '#7209b7',
-            'Defence Infrastructure', '#f72585',
-            /* Add a default color if needed */
-            '#0077b6' // Example default color
-          ],
-          'circle-stroke-color': 'white',
-          'circle-stroke-width': 1,
-          'circle-opacity': [
-            'match',
-            ['get', 'Colour'],
-            'Arms control', 0.8, // Example: Arms control category with 80% opacity
-            'Broad', 0.6, // Another category with 70% opacity
-            // ... other categories with their respective opacities
-            1 // Default opacity
-          ]
-        },
+        layout: {
+          'icon-image': ['match', ['get', 'Diplomacy_category'], 
+          'Visit Diplomacy (Defence)', 'Visit Diplomacy (Defence)',
+          'Military Medical Diplomacy', 'Military Medical Diplomacy',
+          'Training', 'Training',
+          'Cultural Diplomacy (Defence)', 'Cultural Diplomacy (Defence)',
+          'Sports Diplomacy (Defence)', 'Sports Diplomacy (Defence)',
+          'HADR – Disaster Response', 'HADR – Disaster Response',
+          'Defence Cooperation', 'Defence Cooperation',
+          'Military Exercises', 'Military Exercises',
+          'MIL-POL Engagement', 'MIL-POL Engagement',
+          'Arms control', 'Arms control',
+          'Public Diplomacy', 'Public Diplomacy',
+          'Maritime Security', 'Maritime Security',
+          'Defence Infrastructure', 'Defence Infrastructure',
+                         // ... add all categories here
+                         'default-icon'], // Fallback icon
+                         'icon-size': .4, // Adjust the size as needed
+                         'icon-allow-overlap': true, // Allow icons to overlap
+                         'icon-opacity': 0.9 // Adjust icon opacity (0 to 1)
+        }
       });
-    },
-  );
+    });
 
   let activePopup = null;
 
@@ -642,11 +673,9 @@ document.getElementById('closeHelp').addEventListener('click', function() {
   document.getElementById('helpManual').style.display = 'none';
 });
 
-document.getElementById('legendButton').addEventListener('click', function() {
-  document.getElementById('legendManual').style.display = 'block';
-});
 
-document.getElementById('closeLegend').addEventListener('click', function() {
-  document.getElementById('legendManual').style.display = 'none';
-});
+const broadCheckbox = document.getElementById('Broad'); // Assuming the checkbox has an ID of 'Broad'
 
+broadCheckbox.addEventListener('change', function () {
+  applyFilters(); // Call the applyFilters function to filter the data
+});

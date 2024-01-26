@@ -22,67 +22,10 @@
     <link rel='stylesheet' href="style.css" />
     <style>
         /* Existing CSS */
-body { margin: 0; padding: 0; }
-#legend, #legendManual {
-    position: fixed;
-    top: 20%; /* Center the popup vertically */
-    right: -3%; /* Center the popup horizontally */
-    transform: translate(-50%, -50%); /* Center the popup both vertically and horizontally */
-    background: rgba(255, 255, 255, 0.9); /* Adjust transparency */
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    font-size: 0.9em;
-    max-width: 250px;
-    display: true; /* Hide the popup by default */
-}
-/* Media query for screens with a maximum width of 600 pixels */
-@media only screen and (max-width: 600px) {
-    #legend, #legendManual {
-        display: none; /* Hide the legend and manual on small devices */
-    }
-}
+
+
 /* ... (rest of your existing CSS) ... */
 
-/* CSS media query for screens with a maximum width of 600 pixels */
-@media only screen and (max-width: 600px) {
-    .legend-button {
-        display: block;
-        /* ... (other existing styles for the legend button) ... */
-        font-size: 16px;
-        color: white;
-        background-color: #448EE4;
-        border: none;
-        padding: 10px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        position: fixed;
-        bottom: 100px;
-        right: 20px;
-        z-index: 10;
-        transition: background-color 0.3s;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .filter2-button {
-        display: block;
-        /* ... (other existing styles for the legend button) ... */
-        font-size: 16px;
-        color: white;
-        background-color: #448EE4;
-        border: none;
-        padding: 10px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-        position: fixed;
-        bottom: 150px;
-        right: 20px;
-        z-index: 10;
-        transition: background-color 0.3s;
-    }
-}
 
 /* ... (rest of your existing CSS, if any) ... */
     </style>
@@ -90,7 +33,27 @@ body { margin: 0; padding: 0; }
 </head>
 
 <body>
+    <div id='modal' class='absolute top right bottom left scroll-auto hide-visually flex-parent flex-parent--center-main mt120-ml' style='z-index: 20000;'>
 
+        <div class='pt36'>
+            <div class='flex-child bg-white round relative scroll-auto'>                 
+                        <use xlink:href='#icon-close'></use>
+                    </svg>
+                </button>
+                <div class='px24 py24'>
+                    <form id="filters"></form>
+                    <div class='align-center py12'></div>
+                    <div class="flex-parent flex-parent--center-main">
+                        <button id="removeFilters" class="btn reset-button">Reset Filters</button>
+                        <button id="removeFilters2" class="btn apply-button">Apply</button>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 <body>
 
     <div class='flex-parent viewport-full relative scroll-hidden'>
@@ -122,47 +85,12 @@ body { margin: 0; padding: 0; }
 
 
         
-        <div id='modal' class='absolute top right bottom left scroll-auto hide-visually flex-parent flex-parent--center-main mt120-ml'>
-            <div class='pt36'>
-                <div class='flex-child bg-white round relative scroll-auto'>                 
-                            <use xlink:href='#icon-close'></use>
-                        </svg>
-                    </button>
-                    <div class='px24 py24'>
-                        <form id="filters"></form>
-                        <div class='align-center py12'></div>
-                        <div class="flex-parent flex-parent--center-main">
-                            <button id="removeFilters" class="btn reset-button">Reset Filters</button>
-                            <button id="removeFilters2" class="btn apply-button">Apply</button>
-                            
-                        </div>
 
-                    </div>
-
-                </div>
-            </div>
-        </div>
         
         
         </div>
     </div>
     
-    </div>
-    <div id="legend" class="legend">
-        <h3></h3>
-        <div class="category"><span class="color-box" style="background-color: #05668d;"></span>Visit Diplomacy (Defence)</div>
-        <div class="category"><span class="color-box" style="background-color: #028090;"></span>Military Medical Diplomacy</div>
-        <div class="category"><span class="color-box" style="background-color: #00a896;"></span>Training</div>
-        <div class="category"><span class="color-box" style="background-color: #57cc99;"></span>Cultural Diplomacy (Defence)</div>
-        <div class="category"><span class="color-box" style="background-color: #fe7f2d;"></span>Sports Diplomacy (Defence)</div>
-        <div class="category"><span class="color-box" style="background-color: #fcca46;"></span>HADR – Disaster Response</div>
-        <div class="category"><span class="color-box" style="background-color: #cbf3f0;"></span>Defence Cooperation</div>
-        <div class="category"><span class="color-box" style="background-color: #4cc9f0;"></span>Military Exercises</div>
-        <div class="category"><span class="color-box" style="background-color: #4361ee;"></span>MIL-POL Engagement</div>
-        <div class="category"><span class="color-box" style="background-color: #3a0ca3;"></span>Arms Control</div>
-        <div class="category"><span class="color-box" style="background-color: #7209b7;"></span>Maritime Security</div>
-        <div class="category"><span class="color-box" style="background-color: #f72585;"></span>Defence Infrastructure</div>
-    </div>
     </div>
 
 
@@ -178,26 +106,6 @@ body { margin: 0; padding: 0; }
         <button id="closeHelp" class="close-help">Close</button>
     </div>
 
-    <button id="legendButton" class="legend-button">Legend</button>
-
-    <div id="legendManual" class="legend-manual" style="display: none;">
-        <div id="legend2" class="legend2">
-            <h3>Legend</h3>
-            <div class="category"><span class="color-box" style="background-color: #05668d;"></span>Visit Diplomacy (Defence)</div>
-            <div class="category"><span class="color-box" style="background-color: #028090;"></span>Military Medical Diplomacy</div>
-            <div class="category"><span class="color-box" style="background-color: #00a896;"></span>Training</div>
-            <div class="category"><span class="color-box" style="background-color: #57cc99;"></span>Cultural Diplomacy (Defence)</div>
-            <div class="category"><span class="color-box" style="background-color: #fe7f2d;"></span>Sports Diplomacy (Defence)</div>
-            <div class="category"><span class="color-box" style="background-color: #fcca46;"></span>HADR – Disaster Response</div>
-            <div class="category"><span class="color-box" style="background-color: #cbf3f0;"></span>Defence Cooperation</div>
-            <div class="category"><span class="color-box" style="background-color: #4cc9f0;"></span>Military Exercises</div>
-            <div class="category"><span class="color-box" style="background-color: #4361ee;"></span>MIL-POL Engagement</div>
-            <div class="category"><span class="color-box" style="background-color: #3a0ca3;"></span>Arms Control</div>
-            <div class="category"><span class="color-box" style="background-color: #7209b7;"></span>Maritime Security</div>
-            <div class="category"><span class="color-box" style="background-color: #f72585;"></span>Defence Infrastructure</div>
-            <button id="closeLegend" class="close-legend">Close</button>
-        </div>
-    </div>
 
     
 </div>

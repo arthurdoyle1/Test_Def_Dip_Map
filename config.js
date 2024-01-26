@@ -34,9 +34,21 @@ const config = {
       type: 'checkbox',
       title: 'Diplomacy Categories: ',
       columnHeader: 'Diplomacy_category', // Case sensitive - must match spreadsheet entry
-      listItems: ['Arms control', 'Cultural Diplomacy (Defence)', 'Defence Cooperation', 'Defence Infrastructure', 'HADR – Disaster Response', 'Maritime Security', 'Military Exercises', 'Military Medical Diplomacy', 'MIL-POL Engagement', 'Sports Diplomacy (Defence)', 'Training', 'Visit Diplomacy', ], // Case sensitive - must match spreadsheet entry; This will take up to six inputs but is best used with a maximum of three;
+      listItems: ['Arms control', 'Public Diplomacy', 'Cultural Diplomacy (Defence)', 'Defence Cooperation', 'Defence Infrastructure', 'HADR – Disaster Response', 'Maritime Security', 'Military Exercises', 'Military Medical Diplomacy', 'MIL-POL Engagement', 'Sports Diplomacy (Defence)', 'Training', 'Visit Diplomacy', ], // Case sensitive - must match spreadsheet entry; This will take up to six inputs but is best used with a maximum of three;
     },
     {
+      type: 'checkbox',
+      title: 'Broad Data Points: ',
+      columnHeader: 'Colour', // Case sensitive - must match spreadsheet entry
+      listItems: ['Broad',]
+    },
+    {
+      type: 'checkbox',
+      id: 'Broad',
+      title: 'Specific Data Points: ',
+      columnHeader: 'Colour', // Case sensitive - must match spreadsheet entry
+      listItems: ['Specific',]
     },
   ],
 };
+

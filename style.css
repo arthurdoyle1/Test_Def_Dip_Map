@@ -120,7 +120,7 @@
     align-items: center;
     width: 80%;
     max-width: 400px;
-    z-index: 999;
+    z-index: 5;
 }
 
 /* Responsive CSS for mobile devices */
@@ -164,7 +164,7 @@ label[for="show-all-years"] {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    z-index: 1000;
+    z-index: 6;
     font-size: 0.9em;
     max-width: 250px; /* Adjust size as needed */
 }
@@ -343,3 +343,12 @@ label[for="show-all-years"] {
     margin-left: 10px; /* Adjust the space as needed */
 }
 
+#sliderbar {
+    pointer-events: none;
+    /* other styling rules */
+}
+
+#slider, #show-all-years {
+    pointer-events: auto;
+    /* other styling rules */
+}
