@@ -21,10 +21,58 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel='stylesheet' href="style.css" />
     <style>
-        /* Existing CSS */
+/* Existing CSS */
+body { margin: 0; padding: 0; }
+
+body { margin: 0; padding: 0; }
+
+#legend, #legendManual {
+    position: fixed;
+    top: 30%; /* Maintain vertical centering */
+    right: 20; /* Stick to the right side of the screen */
+    transform: translateY(-50%); /* Center vertically only */
+    background: rgba(255, 255, 255, 0.9); /* Adjust transparency */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 0.9em;
+    max-width: 250px;
+    display: block; /* Ensure it's always displayed */
+}
 
 
-/* ... (rest of your existing CSS) ... */
+
+
+
+
+/* Media query for screens with a maximum width of 600 pixels */
+@media only screen and (max-width: 600px), only screen and (max-height: 500px) {
+    #legend, #legendManual {
+        display: block; /* Ensure the legend is displayed */
+        position: fixed;
+        top: 120px; /* Position 120px from the top */
+        right: 10px; /* Position 10px from the right */
+        transform: none; /* Remove any transform property */
+        background: rgba(255, 255, 255, 0.9);
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        font-size: 0.8em; /* Smaller font size */
+        max-width: 150px; /* Smaller width */
+        max-height: 100px; /* Maximum height of 100px */
+        overflow: auto; /* Add scroll for overflow content */
+    }
+
+    .legend .category img {
+        width: 15px; /* Smaller icon size */
+        height: 15px;
+    }
+    #helpButton {
+        display: none; /* Hide the help button on small screens */
+    }
+}
+
 
 
 /* ... (rest of your existing CSS, if any) ... */
@@ -92,10 +140,25 @@
     </div>
     
     </div>
-
+    <div id="legend" class="legend">
+        <h3></h3>
+        <div class="category"><img src="Icons\ARMS.png" alt="Icon"></span>Arms Control</div>
+        <div class="category"><img src="Icons\CULTURAL.png" alt="Icon">Cultural Diplomacy (Defence)</div>
+        <div class="category"><img src="Icons\DEFENCECOOP.PNG" alt="Icon">Defence Cooperation</div>
+        <div class="category"><img src="Icons\DEFENCEINFRASTRUCTURE.PNG" alt="Icon"></span>Defence Infrastructure</div>
+        <div class="category"><img src="Icons\HUMANITARIAN.PNG" alt="Icon">HADR – Disaster Response</div>
+        <div class="category"><img src="Icons\MARITIME.png" alt="Icon"></span>Maritime Security</div>
+        <div class="category"><img src="Icons\MILITARY.PNG" alt="Icon">Military Exercises</div>
+        <div class="category"><img src="Icons\MILITARYMEDICAL.PNG" alt="Icon">Military Medical Diplomacy</div>
+        <div class="category"><img src="Icons\MILPOL.PNG" alt="Icon"></span>MIL-POL Engagement</div>
+        <div class="category"><img src="Icons\PUBLIC.png" alt="Icon"></span>Public Diplomacy</div>
+        <div class="category"><img src="Icons\SPORTS.PNG" alt="Icon">Sports Diplomacy (Defence)</div>
+        <div class="category"><img src="Icons\TRAINING.PNG" alt="Icon">Training</div>
+        <div class="category"><img src="Icons\VISIT.PNG" alt="Icon"> Visit Diplomacy</div>
+    </div>
+    </div>
 
     <button id="helpButton" class="help-button">Help</button>
-
     <div id="helpManual" class="help-manual" style="display: none;">
         <h2><strong>Help Manual</strong></h2>
         <p><strong>Disclaimer:</strong> All efforts are made to ensure the accuracy of markers on the map, but they should be treated as a suggestive visualisation only.</p>
@@ -104,6 +167,28 @@
         <p><strong>Click Entries:</strong> Clicking on the entries in the left sidebar will take you to the corresponding marker on the map.</p>
         <p><strong>Map Navigation:</strong> Use the zoom controls to zoom in or out. Drag the map to pan around.</p>
         <button id="closeHelp" class="close-help">Close</button>
+    </div>
+
+    <button id="legendButton" class="legend-button">Legend</button>
+    <div id="legendManual" class="legend-manual" style="display: none;">
+        <div id="legend2" class="legend2">
+            <h3>Legend</h3>
+            <h3></h3>
+            <div class="category"><img src="Icons\ARMS.png" alt="Icon"></span>Arms Control</div>
+            <div class="category"><img src="Icons\CULTURAL.png" alt="Icon">Cultural Diplomacy (Defence)</div>
+            <div class="category"><img src="Icons\DEFENCECOOP.PNG" alt="Icon">Defence Cooperation</div>
+            <div class="category"><img src="Icons\DEFENCEINFRASTRUCTURE.PNG" alt="Icon"></span>Defence Infrastructure</div>
+            <div class="category"><img src="Icons\HUMANITARIAN.PNG" alt="Icon">HADR – Disaster Response</div>
+            <div class="category"><img src="Icons\MARITIME.png" alt="Icon"></span>Maritime Security</div>
+            <div class="category"><img src="Icons\MILITARY.PNG" alt="Icon">Military Exercises</div>
+            <div class="category"><img src="Icons\MILITARYMEDICAL.PNG" alt="Icon">Military Medical Diplomacy</div>
+            <div class="category"><img src="Icons\MILPOL.PNG" alt="Icon"></span>MIL-POL Engagement</div>
+            <div class="category"><img src="Icons\PUBLIC.png" alt="Icon"></span>Public Diplomacy</div>
+            <div class="category"><img src="Icons\SPORTS.PNG" alt="Icon">Sports Diplomacy (Defence)</div>
+            <div class="category"><img src="Icons\TRAINING.PNG" alt="Icon">Training</div>
+            <div class="category"><img src="Icons\VISIT.PNG" alt="Icon"> Visit Diplomacy</div>
+            <button id="closeLegend" class="close-legend">Close</button>
+        </div>
     </div>
 
 

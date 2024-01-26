@@ -673,6 +673,14 @@ document.getElementById('closeHelp').addEventListener('click', function() {
   document.getElementById('helpManual').style.display = 'none';
 });
 
+document.getElementById('legendButton').addEventListener('click', function() {
+  document.getElementById('legendManual').style.display = 'block';
+});
+
+document.getElementById('closeLegend').addEventListener('click', function() {
+  document.getElementById('legendManual').style.display = 'none';
+});
+
 
 const broadCheckbox = document.getElementById('Broad'); // Assuming the checkbox has an ID of 'Broad'
 
